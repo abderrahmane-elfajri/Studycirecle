@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Track - Studycircle Summer Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="Studycircle" class="logo-img">
+                <h1>Studycircle</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="index.html#about" data-en="About" data-fr="À propos" data-ar="حول">About</a></li>
+                    <li><a href="index.html#program" data-en="Program" data-fr="Programme" data-ar="البرنامج">Program</a></li>
+                    <li><a href="index.html#schedule" data-en="Schedule" data-fr="Horaire" data-ar="الجدول">Schedule</a></li>
+                    <li><a href="index.html#pricing" data-en="Pricing" data-fr="Tarifs" data-ar="الأسعار">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Plan Detail Section -->
+    <section class="plan-detail">
+        <div class="container">
+            <div class="plan-header">
+                <h1>🚀 <span data-en="Skills Track" data-fr="Parcours Compétences" data-ar="مسار المهارات">Skills Track</span></h1>
+                <div class="plan-price">600 DH</div>
+                <p data-en="Learn real-world skills that will set you apart in the digital age" 
+                   data-fr="Apprenez des compétences du monde réel qui vous distingueront à l'ère numérique" 
+                   data-ar="تعلم مهارات العالم الحقيقي التي ستميزك في العصر الرقمي">
+                    Learn real-world skills that will set you apart in the digital age
+                </p>
+            </div>
+
+            <div class="plan-content">
+                <div class="plan-features">
+                    <h2>✅ <span data-en="What You'll Learn" data-fr="Ce que vous apprendrez" data-ar="ما ستتعلمه">What You'll Learn</span></h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-code"></i>
+                            <h3 data-en="Programming" data-fr="Programmation" data-ar="البرمجة">Programming</h3>
+                            <p data-en="Learn the fundamentals of coding with popular languages like Python and JavaScript"
+                               data-fr="Apprenez les fondamentaux du codage avec des langages populaires comme Python et JavaScript"
+                               data-ar="تعلم أساسيات البرمجة بلغات شائعة مثل Python و JavaScript">
+                                Learn the fundamentals of coding with popular languages like Python and JavaScript
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-robot"></i>
+                            <h3 data-en="Robotics" data-fr="Robotique" data-ar="الروبوتات">Robotics</h3>
+                            <p data-en="Explore the exciting world of robotics and automation"
+                               data-fr="Explorez le monde passionnant de la robotique et de l'automatisation"
+                               data-ar="استكشف عالم الروبوتات والأتمتة المثير">
+                                Explore the exciting world of robotics and automation
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3 data-en="Cybersecurity" data-fr="Cybersécurité" data-ar="الأمن السيبراني">Cybersecurity</h3>
+                            <p data-en="Understand digital security and protect yourself online"
+                               data-fr="Comprenez la sécurité numérique et protégez-vous en ligne"
+                               data-ar="فهم الأمن الرقمي وحماية نفسك على الإنترنت">
+                                Understand digital security and protect yourself online
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-brain"></i>
+                            <h3 data-en="AI Tools" data-fr="Outils IA" data-ar="أدوات الذكاء الاصطناعي">AI Tools</h3>
+                            <p data-en="Master modern AI tools and applications for productivity"
+                               data-fr="Maîtrisez les outils et applications IA modernes pour la productivité"
+                               data-ar="إتقان أدوات وتطبيقات الذكاء الاصطناعي الحديثة للإنتاجية">
+                                Master modern AI tools and applications for productivity
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-laptop"></i>
+                            <h3 data-en="Freelancing" data-fr="Freelancing" data-ar="العمل الحر">Freelancing</h3>
+                            <p data-en="Learn how to start your own freelance business and earn money online"
+                               data-fr="Apprenez comment démarrer votre propre entreprise freelance et gagner de l'argent en ligne"
+                               data-ar="تعلم كيفية بدء عملك الحر الخاص وكسب المال عبر الإنترنت">
+                                Learn how to start your own freelance business and earn money online
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-video"></i>
+                            <h3 data-en="Video Editing" data-fr="Montage vidéo" data-ar="تحرير الفيديو">Video Editing</h3>
+                            <p data-en="Create professional videos with industry-standard editing techniques"
+                               data-fr="Créez des vidéos professionnelles avec des techniques d'édition standard de l'industrie"
+                               data-ar="إنشاء مقاطع فيديو احترافية بتقنيات التحرير المعيارية في الصناعة">
+                                Create professional videos with industry-standard editing techniques
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3 data-en="Graphic Design" data-fr="Design graphique" data-ar="التصميم الجرافيكي">Graphic Design</h3>
+                            <p data-en="Design stunning graphics and visual content for digital platforms"
+                               data-fr="Concevez des graphiques époustouflants et du contenu visuel pour les plateformes numériques"
+                               data-ar="تصميم رسومات مذهلة ومحتوى بصري للمنصات الرقمية">
+                                Design stunning graphics and visual content for digital platforms
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3 data-en="Portfolio Projects" data-fr="Projets de portfolio" data-ar="مشاريع المحفظة">Portfolio Projects</h3>
+                            <p data-en="Build real projects that showcase your skills to potential employers"
+                               data-fr="Construisez de vrais projets qui mettent en valeur vos compétences aux employeurs potentiels"
+                               data-ar="بناء مشاريع حقيقية تُظهر مهاراتك لأصحاب العمل المحتملين">
+                                Build real projects that showcase your skills to potential employers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-schedule">
+                    <h2>📅 <span data-en="Your Weekly Schedule" data-fr="Votre horaire hebdomadaire" data-ar="جدولك الأسبوعي">Your Weekly Schedule</span></h2>
+                    <div class="schedule-table">
+                        <div class="schedule-row">
+                            <div class="day">Monday</div>
+                            <div class="time">15:00-17:00</div>
+                            <div class="subject">Skills Workshop</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Tuesday</div>
+                            <div class="time">15:00-17:00</div>
+                            <div class="subject">Skills Workshop</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Wednesday</div>
+                            <div class="time">11:00-13:00</div>
+                            <div class="subject">Skills Workshop</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Thursday</div>
+                            <div class="time">15:00-17:00</div>
+                            <div class="subject">Skills Workshop</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Friday</div>
+                            <div class="time">15:00-17:00</div>
+                            <div class="subject">Skills Workshop</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Saturday</div>
+                            <div class="time">10:00-13:00</div>
+                            <div class="subject">Mini Project Session</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-benefits">
+                    <h2>🎯 <span data-en="Why Choose Skills Track?" data-fr="Pourquoi choisir le Parcours Compétences?" data-ar="لماذا تختار مسار المهارات؟">Why Choose Skills Track?</span></h2>
+                    <ul class="benefits-list">
+                        <li data-en="Industry-relevant skills that employers are looking for"
+                            data-fr="Compétences pertinentes pour l'industrie que les employeurs recherchent"
+                            data-ar="مهارات ذات صلة بالصناعة يبحث عنها أصحاب العمل">
+                            Industry-relevant skills that employers are looking for
+                        </li>
+                        <li data-en="Hands-on projects that build your portfolio"
+                            data-fr="Projets pratiques qui construisent votre portfolio"
+                            data-ar="مشاريع عملية تبني محفظتك">
+                            Hands-on projects that build your portfolio
+                        </li>
+                        <li data-en="Learn from industry professionals and experts"
+                            data-fr="Apprenez de professionnels et d'experts de l'industrie"
+                            data-ar="تعلم من المهنيين والخبراء في الصناعة">
+                            Learn from industry professionals and experts
+                        </li>
+                        <li data-en="Networking opportunities with like-minded peers"
+                            data-fr="Opportunités de réseautage avec des pairs partageant les mêmes idées"
+                            data-ar="فرص التواصل مع الأقران ذوي التفكير المماثل">
+                            Networking opportunities with like-minded peers
+                        </li>
+                        <li data-en="Certificate of completion to boost your resume"
+                            data-fr="Certificat de completion pour renforcer votre CV"
+                            data-ar="شهادة إتمام لتعزيز سيرتك الذاتية">
+                            Certificate of completion to boost your resume
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-cta">
+                    <h2 data-en="Ready to Future-Proof Your Career?" data-fr="Prêt à sécuriser votre carrière?" data-ar="مستعد لتأمين مستقبل مهنتك؟">Ready to Future-Proof Your Career?</h2>
+                    <p data-en="Join the digital revolution and acquire skills that will make you irreplaceable"
+                       data-fr="Rejoignez la révolution numérique et acquérez des compétences qui vous rendront irremplaçable"
+                       data-ar="انضم إلى الثورة الرقمية واكتسب المهارات التي ستجعلك لا غنى عنك">
+                        Join the digital revolution and acquire skills that will make you irreplaceable
+                    </p>
+                    <button class="btn btn-primary btn-register" onclick="openRegistrationForm('Skills Track')">
+                    <a href="register.html" class="btn btn-primary">
+                        👉 <span data-en="Register Now - 600 DH" data-fr="S'inscrire maintenant - 600 DH" data-ar="سجل الآن - 600 درهم">Register Now - 600 DH</span>
+                    </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Studycircle</h3>
+                    <p data-en="Transform your summer into your best investment."
+                       data-fr="Transformez votre été en votre meilleur investissement."
+                       data-ar="حول صيفك إلى أفضل استثمار لك.">
+                        Transform your summer into your best investment.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-fr="Contact" data-ar="اتصل">Contact</h4>
+                    <p>📧 studycircle564@gmail.com</p>
+                    <p>📱 +212 627053139</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Follow Us" data-fr="Suivez-nous" data-ar="تابعنا">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/study_circle.pro?igsh=MTJmMnB3cTMxaWdiOA=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studycircle. <span data-en="All rights reserved." data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

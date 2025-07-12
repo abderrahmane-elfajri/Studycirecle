@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studycircle Summer Program - Transform Your Summer!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="Studycircle" class="logo-img">
+                <h1>Studycircle</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" data-en="Home" data-fr="Accueil" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#about" data-en="About" data-fr="À propos" data-ar="حول">About</a></li>
+                    <li><a href="#program" data-en="Program" data-fr="Programme" data-ar="البرنامج">Program</a></li>
+                    <li><a href="#schedule" data-en="Schedule" data-fr="Horaire" data-ar="الجدول">Schedule</a></li>
+                    <li><a href="#pricing" data-en="Pricing" data-fr="Tarifs" data-ar="الأسعار">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    <span class="emoji">🌞</span>
+                    <span data-en="Transform Your Summer into Your Best Investment!" 
+                          data-fr="Transformez votre été en votre meilleur investissement!" 
+                          data-ar="حول صيفك إلى أفضل استثمار لك!">
+                        Transform Your Summer into Your Best Investment!
+                    </span>
+                    <span class="emoji">🌞</span>
+                </h2>
+                <p class="hero-subtitle" 
+                   data-en="Every summer, we tell ourselves we'll study hard, learn new skills, and prepare for our future… but time slips away in endless scrolling and distractions. The Studycircle Summer Program was created to change that."
+                   data-fr="Chaque été, nous nous disons que nous étudierons dur, apprendrons de nouvelles compétences et nous préparerons pour notre avenir... mais le temps s'échappe dans un défilement et des distractions sans fin. Le programme d'été Studycircle a été créé pour changer cela."
+                   data-ar="كل صيف، نقول لأنفسنا أننا سندرس بجد، ونتعلم مهارات جديدة، ونستعد لمستقبلنا... لكن الوقت ينزلق في التمرير اللانهائي والإلهاءات. تم إنشاء برنامج Studycircle الصيفي لتغيير ذلك.">
+                    Every summer, we tell ourselves we'll study hard, learn new skills, and prepare for our future… but time slips away in endless scrolling and distractions. The Studycircle Summer Program was created to change that.
+                </p>
+                <div class="hero-buttons">
+                    <a href="register.html" class="btn btn-primary">
+                        <span data-en="Join Now" data-fr="Rejoignez maintenant" data-ar="انضم الآن">Join Now</span>
+                        👉
+                    </a>
+                    <a href="#video" class="btn btn-secondary">
+                        <span data-en="Watch Video" data-fr="Regarder la vidéo" data-ar="شاهد الفيديو">Watch Video</span>
+                        🎥
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2 data-en="Learn More About Our Program" 
+                data-fr="En savoir plus sur notre programme" 
+                data-ar="تعرف على المزيد حول برنامجنا">
+                Learn More About Our Program
+            </h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Studycircle Summer Program Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For Section -->
+    <section id="about" class="who-section">
+        <div class="container">
+            <h2>👥 <span data-en="Who Is This For?" data-fr="Pour qui est-ce?" data-ar="لمن هذا؟">Who Is This For?</span></h2>
+            <div class="who-cards">
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <p data-en="You're a Bac student this year and want to feel fully prepared and confident."
+                       data-fr="Vous êtes étudiant au Bac cette année et voulez vous sentir complètement préparé et confiant."
+                       data-ar="أنت طالب في البكالوريا هذا العام وتريد أن تشعر بالاستعداد الكامل والثقة.">
+                        You're a Bac student this year and want to feel fully prepared and confident.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <p data-en="You're curious about new fields like coding, entrepreneurship, study techniques, and more."
+                       data-fr="Vous êtes curieux de nouveaux domaines comme la programmation, l'entrepreneuriat, les techniques d'étude, et plus encore."
+                       data-ar="أنت فضولي حول مجالات جديدة مثل البرمجة وريادة الأعمال وتقنيات الدراسة والمزيد.">
+                        You're curious about new fields like coding, entrepreneurship, study techniques, and more.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💪</div>
+                    <p data-en="You're tired of wasting time and want an environment that keeps you motivated and consistent."
+                       data-fr="Vous êtes fatigué de perdre du temps et voulez un environnement qui vous garde motivé et constant."
+                       data-ar="أنت متعب من إضاعة الوقت وتريد بيئة تبقيك محفزًا ومتسقًا.">
+                        You're tired of wasting time and want an environment that keeps you motivated and consistent.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="program-section">
+        <div class="container">
+            <h2>✅ <span data-en="What's Included" data-fr="Ce qui est inclus" data-ar="ما هو مدرج">What's Included</span></h2>
+            <div class="program-tracks">
+                <div class="track">
+                    <h3>🎓 <span data-en="Bac Track" data-fr="Parcours Bac" data-ar="مسار البكالوريا">Bac Track</span></h3>
+                    <p class="track-description" data-en="Designed for students who want to excel in their Bac exams with comprehensive academic support."
+                       data-fr="Conçu pour les étudiants qui veulent exceller dans leurs examens du Bac avec un soutien académique complet."
+                       data-ar="مصمم للطلاب الذين يريدون التفوق في امتحانات البكالوريا مع دعم أكاديمي شامل.">
+                        Designed for students who want to excel in their Bac exams with comprehensive academic support.
+                    </p>
+                    <ul>
+                        <li data-en="🔴 Live sessions in Maths, Physics, and SVT (3 sessions per week)" 
+                            data-fr="🔴 Sessions en direct en Maths, Physique et SVT (3 sessions par semaine)" 
+                            data-ar="🔴 جلسات مباشرة في الرياضيات والفيزياء والعلوم (3 جلسات في الأسبوع)">
+                            🔴 Live sessions in Maths, Physics, and SVT (3 sessions per week)
+                        </li>
+                        <li data-en="📝 Weekly practice exercises with detailed corrections" 
+                            data-fr="📝 Exercices pratiques hebdomadaires avec corrections détaillées" 
+                            data-ar="📝 تمارين تطبيقية أسبوعية مع تصحيحات مفصلة">
+                            📝 Weekly practice exercises with detailed corrections
+                        </li>
+                        <li data-en="🎯 Exam strategies and time management techniques" 
+                            data-fr="🎯 Stratégies d'examen et techniques de gestion du temps" 
+                            data-ar="🎯 استراتيجيات الامتحان وتقنيات إدارة الوقت">
+                            🎯 Exam strategies and time management techniques
+                        </li>
+                        <li data-en="📅 Personalized weekly study plans" 
+                            data-fr="📅 Plans d'étude hebdomadaires personnalisés" 
+                            data-ar="📅 خطط دراسية أسبوعية شخصية">
+                            📅 Personalized weekly study plans
+                        </li>
+                        <li data-en="🏆 Mock exams and performance tracking" 
+                            data-fr="🏆 Examens blancs et suivi des performances" 
+                            data-ar="🏆 امتحانات تجريبية وتتبع الأداء">
+                            🏆 Mock exams and performance tracking
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="track">
+                    <h3>🚀 <span data-en="Skills Track" data-fr="Parcours Compétences" data-ar="مسار المهارات">Skills Track</span></h3>
+                    <p class="track-description" data-en="Perfect for students who want to develop marketable skills and build a strong portfolio for their future career."
+                       data-fr="Parfait pour les étudiants qui veulent développer des compétences commercialisables et créer un portfolio solide pour leur future carrière."
+                       data-ar="مثالي للطلاب الذين يريدون تطوير مهارات قابلة للتسويق وبناء محفظة قوية لمستقبلهم المهني.">
+                        Perfect for students who want to develop marketable skills and build a strong portfolio for their future career.
+                    </p>
+                    <ul>
+                        <li data-en="💻 Programming & Web Development (HTML, CSS, JavaScript, Python)" 
+                            data-fr="💻 Programmation et développement web (HTML, CSS, JavaScript, Python)" 
+                            data-ar="💻 البرمجة وتطوير الويب (HTML, CSS, JavaScript, Python)">
+                            💻 Programming & Web Development (HTML, CSS, JavaScript, Python)
+                        </li>
+                        <li data-en="🤖 AI Tools & Automation (ChatGPT, Midjourney, Automation scripts)" 
+                            data-fr="🤖 Outils IA et automatisation (ChatGPT, Midjourney, scripts d'automatisation)" 
+                            data-ar="🤖 أدوات الذكاء الاصطناعي والأتمتة (ChatGPT, Midjourney, سكريبتات الأتمتة)">
+                            🤖 AI Tools & Automation (ChatGPT, Midjourney, Automation scripts)
+                        </li>
+                        <li data-en="🎨 Digital Design (Photoshop, Illustrator, Canva Pro)" 
+                            data-fr="🎨 Design numérique (Photoshop, Illustrator, Canva Pro)" 
+                            data-ar="🎨 التصميم الرقمي (Photoshop, Illustrator, Canva Pro)">
+                            🎨 Digital Design (Photoshop, Illustrator, Canva Pro)
+                        </li>
+                        <li data-en="🎬 Video Editing & Content Creation (Premiere Pro, After Effects)" 
+                            data-fr="🎬 Montage vidéo et création de contenu (Premiere Pro, After Effects)" 
+                            data-ar="🎬 تحرير الفيديو وإنشاء المحتوى (Premiere Pro, After Effects)">
+                            🎬 Video Editing & Content Creation (Premiere Pro, After Effects)
+                        </li>
+                        <li data-en="💼 Freelancing & Business Skills (Client management, Pricing, Portfolio)" 
+                            data-fr="💼 Freelancing et compétences commerciales (gestion clients, tarification, portfolio)" 
+                            data-ar="💼 العمل الحر والمهارات التجارية (إدارة العملاء، التسعير، المحفظة)">
+                            💼 Freelancing & Business Skills (Client management, Pricing, Portfolio)
+                        </li>
+                        <li data-en="🚀 3 Real projects to build your portfolio" 
+                            data-fr="🚀 3 projets réels pour construire votre portfolio" 
+                            data-ar="🚀 3 مشاريع حقيقية لبناء محفظتك">
+                            🚀 3 Real projects to build your portfolio
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="all-students">
+                <h3>🔗 <span data-en="All Students Get" data-fr="Tous les étudiants reçoivent" data-ar="جميع الطلاب يحصلون على">All Students Get</span></h3>
+                <div class="benefits">
+                    <div class="benefit">
+                        <i class="fas fa-video"></i>
+                        <span data-en="Session replays" data-fr="Rediffusions de sessions" data-ar="إعادة تشغيل الجلسات">Session replays</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-users"></i>
+                        <span data-en="Private community" data-fr="Communauté privée" data-ar="مجتمع خاص">Private community</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span data-en="Expert guidance" data-fr="Guidance d'experts" data-ar="إرشاد الخبراء">Expert guidance</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-certificate"></i>
+                        <span data-en="Certificate" data-fr="Certificat" data-ar="شهادة">Certificate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <h2>🗓 <span data-en="Weekly Schedule" data-fr="Horaire hebdomadaire" data-ar="الجدول الأسبوعي">Weekly Schedule</span></h2>
+            <div class="schedule-grid">
+                <div class="day-card">
+                    <h3 data-en="Monday" data-fr="Lundi" data-ar="الاثنين">Monday</h3>
+                    <div class="schedule-item">
+                        <span class="time">10:00-12:00</span>
+                        <span class="subject" data-en="Math Session" data-fr="Session de Maths" data-ar="جلسة الرياضيات">Math Session</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">15:00-17:00</span>
+                        <span class="subject" data-en="Skill Building" data-fr="Développement des compétences" data-ar="بناء المهارات">Skill Building</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">19:00-20:30</span>
+                        <span class="subject" data-en="Group Study (Math)" data-fr="Étude en groupe (Maths)" data-ar="دراسة جماعية (رياضيات)">Group Study (Math)</span>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <h3 data-en="Tuesday" data-fr="Mardi" data-ar="الثلاثاء">Tuesday</h3>
+                    <div class="schedule-item">
+                        <span class="time">10:00-12:00</span>
+                        <span class="subject" data-en="Physics Session" data-fr="Session de Physique" data-ar="جلسة الفيزياء">Physics Session</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">15:00-17:00</span>
+                        <span class="subject" data-en="Skill Building" data-fr="Développement des compétences" data-ar="بناء المهارات">Skill Building</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">19:00-20:30</span>
+                        <span class="subject" data-en="Group Study (Physics)" data-fr="Étude en groupe (Physique)" data-ar="دراسة جماعية (فيزياء)">Group Study (Physics)</span>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <h3 data-en="Wednesday" data-fr="Mercredi" data-ar="الأربعاء">Wednesday</h3>
+                    <div class="schedule-item">
+                        <span class="time">11:00-13:00</span>
+                        <span class="subject" data-en="Skill Building" data-fr="Développement des compétences" data-ar="بناء المهارات">Skill Building</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">19:00-21:00</span>
+                        <span class="subject" data-en="Optional Group Study" data-fr="Étude de groupe optionnelle" data-ar="دراسة جماعية اختيارية">Optional Group Study</span>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <h3 data-en="Thursday" data-fr="Jeudi" data-ar="الخميس">Thursday</h3>
+                    <div class="schedule-item">
+                        <span class="time">10:00-12:00</span>
+                        <span class="subject" data-en="Math Session" data-fr="Session de Maths" data-ar="جلسة الرياضيات">Math Session</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">15:00-17:00</span>
+                        <span class="subject" data-en="Skill Building" data-fr="Développement des compétences" data-ar="بناء المهارات">Skill Building</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">19:00-20:30</span>
+                        <span class="subject" data-en="Group Study (Math)" data-fr="Étude en groupe (Maths)" data-ar="دراسة جماعية (رياضيات)">Group Study (Math)</span>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <h3 data-en="Friday" data-fr="Vendredi" data-ar="الجمعة">Friday</h3>
+                    <div class="schedule-item">
+                        <span class="time">10:00-12:00</span>
+                        <span class="subject" data-en="Physics Session" data-fr="Session de Physique" data-ar="جلسة الفيزياء">Physics Session</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">15:00-17:00</span>
+                        <span class="subject" data-en="Skill Building" data-fr="Développement des compétences" data-ar="بناء المهارات">Skill Building</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">19:00-20:30</span>
+                        <span class="subject" data-en="Group Study (Physics)" data-fr="Étude en groupe (Physique)" data-ar="دراسة جماعية (فيزياء)">Group Study (Physics)</span>
+                    </div>
+                </div>
+                <div class="day-card">
+                    <h3 data-en="Saturday" data-fr="Samedi" data-ar="السبت">Saturday</h3>
+                    <div class="schedule-item">
+                        <span class="time">10:00-13:00</span>
+                        <span class="subject" data-en="Mini Project" data-fr="Mini Projet" data-ar="مشروع صغير">Mini Project</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">19:00-21:00</span>
+                        <span class="subject" data-en="Optional Group Study" data-fr="Étude de groupe optionnelle" data-ar="دراسة جماعية اختيارية">Optional Group Study</span>
+                    </div>
+                </div>
+                <div class="day-card rest-day">
+                    <h3 data-en="Sunday" data-fr="Dimanche" data-ar="الأحد">Sunday</h3>
+                    <div class="rest-message">
+                        <span data-en="Rest Day" data-fr="Jour de repos" data-ar="يوم راحة">Rest Day</span>
+                        😴
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>💸 <span data-en="Pricing & Payment" data-fr="Tarifs et paiement" data-ar="التسعير والدفع">Pricing & Payment</span></h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3 data-en="Bac Track" data-fr="Parcours Bac" data-ar="مسار البكالوريا">Bac Track</h3>
+                    <div class="price">500 DH</div>
+                    <p data-en="Perfect for Bac students" data-fr="Parfait pour les étudiants au Bac" data-ar="مثالي لطلاب البكالوريا">Perfect for Bac students</p>
+                    <a href="bac-track.html" class="btn btn-outline">
+                        <span data-en="View Details" data-fr="Voir les détails" data-ar="عرض التفاصيل">View Details</span>
+                    </a>
+                </div>
+                <div class="pricing-card">
+                    <h3 data-en="Skills Track" data-fr="Parcours Compétences" data-ar="مسار المهارات">Skills Track</h3>
+                    <div class="price">600 DH</div>
+                    <p data-en="Learn real-world skills" data-fr="Apprenez des compétences du monde réel" data-ar="تعلم مهارات العالم الحقيقي">Learn real-world skills</p>
+                    <a href="skills-track.html" class="btn btn-outline">
+                        <span data-en="View Details" data-fr="Voir les détails" data-ar="عرض التفاصيل">View Details</span>
+                    </a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 data-en="Combo Package" data-fr="Package Combo" data-ar="باقة مجمعة">Combo Package</h3>
+                    <div class="price">1000 DH</div>
+                    <p data-en="Both tracks at special price" data-fr="Les deux parcours à prix spécial" data-ar="كلا المسارين بسعر خاص">Both tracks at special price</p>
+                    <a href="combo-package.html" class="btn btn-outline">
+                        <span data-en="View Details" data-fr="Voir les détails" data-ar="عرض التفاصيل">View Details</span>
+                    </a>
+                </div>
+            </div>
+            <p class="payment-note" 
+               data-en="Payments can be made in multiple installments. Contact us for details."
+               data-fr="Les paiements peuvent être effectués en plusieurs versements. Contactez-nous pour plus de détails."
+               data-ar="يمكن الدفع على أقساط متعددة. اتصل بنا للحصول على التفاصيل.">
+                Payments can be made in multiple installments. Contact us for details.
+            </p>
+        </div>
+    </section>
+
+    <!-- Dates Section -->
+    <section class="dates-section">
+        <div class="container">
+            <h2>📅 <span data-en="Program Dates" data-fr="Dates du programme" data-ar="تواريخ البرنامج">Program Dates</span></h2>
+            <div class="dates-info">
+                <div class="date-item">
+                    <i class="fas fa-calendar-start"></i>
+                    <div>
+                        <h3 data-en="Start Date" data-fr="Date de début" data-ar="تاريخ البداية">Start Date</h3>
+                        <p data-en="July 21st, 2025" data-fr="21 juillet 2025" data-ar="21 يوليو 2025">July 21st, 2025</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <div>
+                        <h3 data-en="End Date" data-fr="Date de fin" data-ar="تاريخ الانتهاء">End Date</h3>
+                        <p data-en="September 5th, 2025" data-fr="5 septembre 2025" data-ar="5 سبتمبر 2025">September 5th, 2025</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <i class="fas fa-laptop"></i>
+                    <div>
+                        <h3 data-en="Format" data-fr="Format" data-ar="الشكل">Format</h3>
+                        <p data-en="100% Online" data-fr="100% en ligne" data-ar="100% عبر الإنترنت">100% Online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2> <span data-en="Frequently Asked Questions ❓" data-fr="Questions fréquemment posées ❓" data-ar="الأسئلة المتكررة">Frequently Asked Questions ❓</span></h2>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="Is everything online?" data-fr="Tout est-il en ligne?" data-ar="هل كل شيء عبر الإنترنت؟">Is everything online?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes! All sessions are live on Zoom and in private groups."
+                           data-fr="Oui! Toutes les sessions sont en direct sur Zoom et dans des groupes privés."
+                           data-ar="نعم! جميع الجلسات مباشرة على Zoom وفي مجموعات خاصة.">
+                            Yes! All sessions are live on Zoom and in private groups.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="Can I pay in installments?" data-fr="Puis-je payer en plusieurs fois?" data-ar="هل يمكنني الدفع على أقساط؟">Can I pay in installments?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, you can pay in multiple installments. Contact us for details."
+                           data-fr="Oui, vous pouvez payer en plusieurs versements. Contactez-nous pour plus de détails."
+                           data-ar="نعم، يمكنك الدفع على أقساط متعددة. اتصل بنا للحصول على التفاصيل.">
+                            Yes, you can pay in multiple installments. Contact us for details.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="Can I join both tracks?" data-fr="Puis-je rejoindre les deux parcours?" data-ar="هل يمكنني الانضمام إلى كلا المسارين؟">Can I join both tracks?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes! We even have a special combo price for both tracks."
+                           data-fr="Oui! Nous avons même un prix combo spécial pour les deux parcours."
+                           data-ar="نعم! لدينا حتى سعر خاص مجمع لكلا المسارين.">
+                            Yes! We even have a special combo price for both tracks.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-en="Will I get a certificate?" data-fr="Vais-je recevoir un certificat?" data-ar="هل سأحصل على شهادة؟">Will I get a certificate?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, you'll receive a certificate you can add to your CV or portfolio."
+                           data-fr="Oui, vous recevrez un certificat que vous pouvez ajouter à votre CV ou portfolio."
+                           data-ar="نعم، ستحصل على شهادة يمكنك إضافتها إلى سيرتك الذاتية أو محفظتك.">
+                            Yes, you'll receive a certificate you can add to your CV or portfolio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="register" class="cta-section">
+        <div class="container">
+            <h2 data-en="Ready to Transform Your Summer?" 
+                data-fr="Prêt à transformer votre été?" 
+                data-ar="هل أنت مستعد لتحويل صيفك؟">
+                Ready to Transform Your Summer?
+            </h2>
+            <p data-en="Join hundreds of students who are already making their summer count!"
+               data-fr="Rejoignez des centaines d'étudiants qui font déjà compter leur été!"
+               data-ar="انضم إلى مئات الطلاب الذين يجعلون صيفهم يحتسب بالفعل!">
+                Join hundreds of students who are already making their summer count!
+            </p>
+            <a href="register.html" class="btn btn-cta">
+                👉 <span data-en="Register Now" data-fr="S'inscrire maintenant" data-ar="سجل الآن">Register Now</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Studycircle</h3>
+                    <p data-en="Transform your summer into your best investment."
+                       data-fr="Transformez votre été en votre meilleur investissement."
+                       data-ar="حول صيفك إلى أفضل استثمار لك.">
+                        Transform your summer into your best investment.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-fr="Contact" data-ar="اتصل">Contact</h4>
+                    <p>📧 studycircle564@gmail.com</p>
+                    <p>📱 +212 627053139</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Follow Us" data-fr="Suivez-nous" data-ar="تابعنا">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/study_circle.pro?igsh=MTJmMnB3cTMxaWdiOA=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studycircle. <span data-en="All rights reserved." data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

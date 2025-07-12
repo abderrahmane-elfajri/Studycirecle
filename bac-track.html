@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bac Track - Studycircle Summer Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="Studycircle" class="logo-img">
+                <h1>Studycircle</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="index.html#about" data-en="About" data-fr="À propos" data-ar="حول">About</a></li>
+                    <li><a href="index.html#program" data-en="Program" data-fr="Programme" data-ar="البرنامج">Program</a></li>
+                    <li><a href="index.html#schedule" data-en="Schedule" data-fr="Horaire" data-ar="الجدول">Schedule</a></li>
+                    <li><a href="index.html#pricing" data-en="Pricing" data-fr="Tarifs" data-ar="الأسعار">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Plan Detail Section -->
+    <section class="plan-detail">
+        <div class="container">
+            <div class="plan-header">
+                <h1>🎓 <span data-en="Bac Track" data-fr="Parcours Bac" data-ar="مسار البكالوريا">Bac Track</span></h1>
+                <div class="plan-price">500 DH</div>
+                <p data-en="Perfect for Bac students who want to excel in their studies" 
+                   data-fr="Parfait pour les étudiants au Bac qui veulent exceller dans leurs études" 
+                   data-ar="مثالي لطلاب البكالوريا الذين يريدون التفوق في دراستهم">
+                    Perfect for Bac students who want to excel in their studies
+                </p>
+            </div>
+
+            <div class="plan-content">
+                <div class="plan-features">
+                    <h2>✅ <span data-en="What You'll Get" data-fr="Ce que vous obtiendrez" data-ar="ما ستحصل عليه">What You'll Get</span></h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3 data-en="Live Sessions" data-fr="Sessions en direct" data-ar="جلسات مباشرة">Live Sessions</h3>
+                            <p data-en="Interactive live sessions in Mathematics, Physics, and SVT with expert teachers"
+                               data-fr="Sessions en direct interactives en Mathématiques, Physique et SVT avec des professeurs experts"
+                               data-ar="جلسات مباشرة تفاعلية في الرياضيات والفيزياء والعلوم الطبيعية مع معلمين خبراء">
+                                Interactive live sessions in Mathematics, Physics, and SVT with expert teachers
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-tasks"></i>
+                            <h3 data-en="Exercises & Corrections" data-fr="Exercices et corrections" data-ar="تمارين وتصحيحات">Exercises & Corrections</h3>
+                            <p data-en="Weekly exercises with detailed corrections and explanations"
+                               data-fr="Exercices hebdomadaires avec corrections détaillées et explications"
+                               data-ar="تمارين أسبوعية مع تصحيحات مفصلة وتوضيحات">
+                                Weekly exercises with detailed corrections and explanations
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3 data-en="Study Strategies" data-fr="Stratégies d'étude" data-ar="استراتيجيات الدراسة">Study Strategies</h3>
+                            <p data-en="Proven tips and strategies to boost your grades and study efficiency"
+                               data-fr="Conseils et stratégies éprouvés pour améliorer vos notes et votre efficacité d'étude"
+                               data-ar="نصائح واستراتيجيات مثبتة لتحسين درجاتك وكفاءة دراستك">
+                                Proven tips and strategies to boost your grades and study efficiency
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3 data-en="Study Plans" data-fr="Plans d'étude" data-ar="خطط الدراسة">Study Plans</h3>
+                            <p data-en="Personalized weekly study plans tailored to your needs"
+                               data-fr="Plans d'étude hebdomadaires personnalisés adaptés à vos besoins"
+                               data-ar="خطط دراسة أسبوعية مخصصة ومصممة لاحتياجاتك">
+                                Personalized weekly study plans tailored to your needs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-schedule">
+                    <h2>📅 <span data-en="Your Weekly Schedule" data-fr="Votre horaire hebdomadaire" data-ar="جدولك الأسبوعي">Your Weekly Schedule</span></h2>
+                    <div class="schedule-table">
+                        <div class="schedule-row">
+                            <div class="day">Monday</div>
+                            <div class="time">10:00-12:00</div>
+                            <div class="subject">Mathematics Session</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Monday</div>
+                            <div class="time">19:00-20:30</div>
+                            <div class="subject">Math Group Study</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Tuesday</div>
+                            <div class="time">10:00-12:00</div>
+                            <div class="subject">Physics Session</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Tuesday</div>
+                            <div class="time">19:00-20:30</div>
+                            <div class="subject">Physics Group Study</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Thursday</div>
+                            <div class="time">10:00-12:00</div>
+                            <div class="subject">Mathematics Session</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Thursday</div>
+                            <div class="time">19:00-20:30</div>
+                            <div class="subject">Math Group Study</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Friday</div>
+                            <div class="time">10:00-12:00</div>
+                            <div class="subject">Physics Session</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="day">Friday</div>
+                            <div class="time">19:00-20:30</div>
+                            <div class="subject">Physics Group Study</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan-benefits">
+                    <h2>🎯 <span data-en="Why Choose Bac Track?" data-fr="Pourquoi choisir le Parcours Bac?" data-ar="لماذا تختار مسار البكالوريا؟">Why Choose Bac Track?</span></h2>
+                    <ul class="benefits-list">
+                        <li data-en="Expert teachers with proven track record in Bac preparation"
+                            data-fr="Professeurs experts avec un parcours éprouvé dans la préparation au Bac"
+                            data-ar="معلمون خبراء مع سجل حافل في إعداد البكالوريا">
+                            Expert teachers with proven track record in Bac preparation
+                        </li>
+                        <li data-en="Small group sessions for personalized attention"
+                            data-fr="Sessions en petits groupes pour une attention personnalisée"
+                            data-ar="جلسات مجموعات صغيرة للحصول على اهتمام شخصي">
+                            Small group sessions for personalized attention
+                        </li>
+                        <li data-en="Access to exclusive study materials and resources"
+                            data-fr="Accès à des matériels d'étude et ressources exclusives"
+                            data-ar="الوصول إلى مواد دراسية وموارد حصرية">
+                            Access to exclusive study materials and resources
+                        </li>
+                        <li data-en="Regular progress tracking and feedback"
+                            data-fr="Suivi régulier des progrès et retours"
+                            data-ar="تتبع منتظم للتقدم والتغذية الراجعة">
+                            Regular progress tracking and feedback
+                        </li>
+                        <li data-en="Certificate of completion"
+                            data-fr="Certificat de completion"
+                            data-ar="شهادة إتمام">
+                            Certificate of completion
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="plan-cta">
+                    <h2 data-en="Ready to Start Your Journey?" data-fr="Prêt à commencer votre voyage?" data-ar="مستعد لبدء رحلتك؟">Ready to Start Your Journey?</h2>
+                    <p data-en="Join hundreds of successful students who have transformed their academic performance"
+                       data-fr="Rejoignez des centaines d'étudiants qui ont transformé leurs performances académiques"
+                       data-ar="انضم إلى مئات الطلاب الناجحين الذين حولوا أداءهم الأكاديمي">
+                        Join hundreds of successful students who have transformed their academic performance
+                    </p>
+                    <button class="btn btn-primary btn-register" onclick="openRegistrationForm('Bac Track')">
+                        👉 <span data-en="Register Now - 500 DH" data-fr="S'inscrire maintenant - 500 DH" data-ar="سجل الآن - 500 درهم">Register Now - 500 DH</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Studycircle</h3>
+                    <p data-en="Transform your summer into your best investment."
+                       data-fr="Transformez votre été en votre meilleur investissement."
+                       data-ar="حول صيفك إلى أفضل استثمار لك.">
+                        Transform your summer into your best investment.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-fr="Contact" data-ar="اتصل">Contact</h4>
+                    <p>📧 studycircle564@gmail.com</p>
+                    <p>📱 +212 627053139</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Follow Us" data-fr="Suivez-nous" data-ar="تابعنا">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/study_circle.pro?igsh=MTJmMnB3cTMxaWdiOA=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studycircle. <span data-en="All rights reserved." data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

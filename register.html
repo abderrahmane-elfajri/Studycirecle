@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Studycircle Summer Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="Studycircle" class="logo-img">
+                <h1>Studycircle</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="index.html#about" data-en="About" data-fr="À propos" data-ar="حول">About</a></li>
+                    <li><a href="index.html#program" data-en="Program" data-fr="Programme" data-ar="البرنامج">Program</a></li>
+                    <li><a href="index.html#pricing" data-en="Pricing" data-fr="Tarifs" data-ar="الأسعار">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-header">
+                <h1 data-en="Register for Studycircle Summer Program" 
+                    data-fr="S'inscrire au programme d'été Studycircle" 
+                    data-ar="سجل في برنامج Studycircle الصيفي">
+                    Register for Studycircle Summer Program
+                </h1>
+                <p data-en="Join hundreds of students transforming their summer into their best investment!"
+                   data-fr="Rejoignez des centaines d'étudiants qui transforment leur été en leur meilleur investissement!"
+                   data-ar="انضم إلى مئات الطلاب الذين يحولون صيفهم إلى أفضل استثمار لهم!">
+                    Join hundreds of students transforming their summer into their best investment!
+                </p>
+            </div>
+
+            <!-- Plan Selection Cards -->
+            <div class="plan-selection">
+                <h2 data-en="Choose Your Plan" data-fr="Choisissez votre plan" data-ar="اختر خطتك">Choose Your Plan</h2>
+                <div class="pricing-cards">
+                    <div class="pricing-card" onclick="selectPlan('Bac Track')">
+                        <div class="plan-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 data-en="Bac Track" data-fr="Parcours Bac" data-ar="مسار البكالوريا">Bac Track</h3>
+                        <div class="price">500 DH</div>
+                        <ul class="plan-features">
+                            <li data-en="Live Math, Physics & SVT sessions" data-fr="Sessions en direct Maths, Physique et SVT" data-ar="جلسات مباشرة في الرياضيات والفيزياء والعلوم">Live Math, Physics & SVT sessions</li>
+                            <li data-en="Weekly study plans" data-fr="Plans d'étude hebdomadaires" data-ar="خطط دراسية أسبوعية">Weekly study plans</li>
+                            <li data-en="Exercises and corrections" data-fr="Exercices et corrections" data-ar="تمارين وتصحيحات">Exercises and corrections</li>
+                            <li data-en="Grade-boosting strategies" data-fr="Stratégies d'amélioration des notes" data-ar="استراتيجيات تحسين الدرجات">Grade-boosting strategies</li>
+                        </ul>
+                        <div class="plan-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card" onclick="selectPlan('Skills Track')">
+                        <div class="plan-badge">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 data-en="Skills Track" data-fr="Parcours Compétences" data-ar="مسار المهارات">Skills Track</h3>
+                        <div class="price">600 DH</div>
+                        <ul class="plan-features">
+                            <li data-en="Coding & Tech Skills" data-fr="Compétences en programmation et tech" data-ar="مهارات البرمجة والتقنية">Coding & Tech Skills</li>
+                            <li data-en="Freelancing & Business" data-fr="Freelancing et affaires" data-ar="العمل الحر والأعمال">Freelancing & Business</li>
+                            <li data-en="Creative Skills" data-fr="Compétences créatives" data-ar="المهارات الإبداعية">Creative Skills</li>
+                            <li data-en="Portfolio Projects" data-fr="Projets de portfolio" data-ar="مشاريع المحفظة">Portfolio Projects</li>
+                        </ul>
+                        <div class="plan-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card featured" onclick="selectPlan('Combo Package')">
+                        <div class="plan-badge">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 data-en="Combo Package" data-fr="Package Combo" data-ar="باقة مجمعة">Combo Package</h3>
+                        <div class="price">1000 DH</div>
+                        <ul class="plan-features">
+                            <li data-en="Everything from Bac Track" data-fr="Tout du parcours Bac" data-ar="كل شيء من مسار البكالوريا">Everything from Bac Track</li>
+                            <li data-en="Everything from Skills Track" data-fr="Tout du parcours Compétences" data-ar="كل شيء من مسار المهارات">Everything from Skills Track</li>
+                            <li data-en="Bonus mentoring sessions" data-fr="Sessions de mentorat bonus" data-ar="جلسات إرشادية إضافية">Bonus mentoring sessions</li>
+                            <li data-en="Priority support" data-fr="Support prioritaire" data-ar="دعم أولوي">Priority support</li>
+                        </ul>
+                        <div class="plan-check">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="registration-form-container">
+                <h2 data-en="Complete Your Registration" data-fr="Complétez votre inscription" data-ar="أكمل تسجيلك">Complete Your Registration</h2>
+                
+                <form id="registrationForm" onsubmit="submitRegistration(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" data-en="First Name" data-fr="Prénom" data-ar="الاسم الأول">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" data-en="Last Name" data-fr="Nom de famille" data-ar="اسم العائلة">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address" data-fr="Adresse e-mail" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-en="Phone Number" data-fr="Numéro de téléphone" data-ar="رقم الهاتف">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plan" data-en="Selected Plan" data-fr="Plan sélectionné" data-ar="الخطة المحددة">Selected Plan</label>
+                        <select id="plan" name="plan" required>
+                            <option value="" data-en="Choose a plan..." data-fr="Choisissez un plan..." data-ar="اختر خطة...">Choose a plan...</option>
+                            <option value="Bac Track" data-en="Bac Track - 500 DH" data-fr="Parcours Bac - 500 DH" data-ar="مسار البكالوريا - 500 درهم">Bac Track - 500 DH</option>
+                            <option value="Skills Track" data-en="Skills Track - 600 DH" data-fr="Parcours Compétences - 600 DH" data-ar="مسار المهارات - 600 درهم">Skills Track - 600 DH</option>
+                            <option value="Combo Package" data-en="Combo Package - 1000 DH" data-fr="Package Combo - 1000 DH" data-ar="باقة مجمعة - 1000 درهم">Combo Package - 1000 DH</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-en="Additional Message (Optional)" data-fr="Message supplémentaire (optionnel)" data-ar="رسالة إضافية (اختيارية)">Additional Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any questions or special requests..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-en="Submit Registration" data-fr="Soumettre l'inscription" data-ar="إرسال التسجيل">Submit Registration</span>
+                    </button>
+                </form>
+                
+                <div id="submitMessage" class="submit-message"></div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="registration-contact">
+                <h3 data-en="Need Help?" data-fr="Besoin d'aide?" data-ar="تحتاج مساعدة؟">Need Help?</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>studycircle564@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+212 627053139</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/study_circle.pro?igsh=MTJmMnB3cTMxaWdiOA==">@study_circle.pro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Studycircle</h3>
+                    <p data-en="Transform your summer into your best investment."
+                       data-fr="Transformez votre été en votre meilleur investissement."
+                       data-ar="حول صيفك إلى أفضل استثمار لك.">
+                        Transform your summer into your best investment.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-fr="Contact" data-ar="اتصل">Contact</h4>
+                    <p>📧 studycircle564@gmail.com</p>
+                    <p>📱 +212 627053139</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Follow Us" data-fr="Suivez-nous" data-ar="تابعنا">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/study_circle.pro?igsh=MTJmMnB3cTMxaWdiOA=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Studycircle. <span data-en="All rights reserved." data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

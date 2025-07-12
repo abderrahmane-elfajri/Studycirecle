@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Registration - Studycircle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        .config-check {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .config-check h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .config-item {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 3px;
+        }
+        .config-ok {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .config-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Registration Test Page</h1>
+        
+        <div id="configStatus" class="config-check">
+            <h3>Configuration Status</h3>
+            <div id="configItems">
+                <div class="config-item">Checking configuration...</div>
+            </div>
+        </div>
+        
+        <div id="statusMessage" style="display: none;"></div>
+        
+        <form id="testForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" value="Test" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" value="User" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="test@example.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" value="+212 600123456" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="plan">Plan</label>
+                <select id="plan" name="plan" required>
+                    <option value="Bac Track">Bac Track - 500 DH</option>
+                    <option value="Skills Track">Skills Track - 600 DH</option>
+                    <option value="Combo Package">Combo Package - 1000 DH</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="3">This is a test registration.</textarea>
+            </div>
+            
+            <button type="submit" id="submitBtn">🚀 Test Registration</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check configuration on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkConfiguration();
+        });
+
+        function checkConfiguration() {
+            const configItems = document.getElementById('configItems');
+            const items = [];
+            
+            // Check if GOOGLE_SCRIPT_URL is configured
+            if (typeof GOOGLE_SCRIPT_URL !== 'undefined') {
+                if (GOOGLE_SCRIPT_URL === 'REPLACE_WITH_YOUR_ACTUAL_DEPLOYED_SCRIPT_URL') {
+                    items.push({
+                        status: 'error',
+                        message: '❌ Google Apps Script URL not configured',
+                        details: 'You need to replace GOOGLE_SCRIPT_URL with your deployed Apps Script URL'
+                    });
+                } else {
+                    items.push({
+                        status: 'ok',
+                        message: '✅ Google Apps Script URL configured',
+                        details: `URL: ${GOOGLE_SCRIPT_URL.substring(0, 50)}...`
+                    });
+                }
+            } else {
+                items.push({
+                    status: 'error',
+                    message: '❌ GOOGLE_SCRIPT_URL variable not found',
+                    details: 'Make sure script.js is loaded properly'
+                });
+            }
+            
+            // Check if submitToGoogleSheets function exists
+            if (typeof submitToGoogleSheets === 'function') {
+                items.push({
+                    status: 'ok',
+                    message: '✅ submitToGoogleSheets function available'
+                });
+            } else {
+                items.push({
+                    status: 'error',
+                    message: '❌ submitToGoogleSheets function not found'
+                });
+            }
+            
+            // Update UI
+            configItems.innerHTML = items.map(item => `
+                <div class="config-item config-${item.status}">
+                    <strong>${item.message}</strong>
+                    ${item.details ? `<br><small>${item.details}</small>` : ''}
+                </div>
+            `).join('');
+        }
+
+        // Handle form submission
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Testing...';
+            
+            // Clear previous messages
+            statusMessage.style.display = 'none';
+            
+            try {
+                // Prepare test data
+                const formData = new FormData(form);
+                const testData = {
+                    timestamp: new Date().toISOString(),
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    plan: formData.get('plan'),
+                    message: formData.get('message'),
+                    language: 'en'
+                };
+                
+                console.log('Test data:', testData);
+                
+                // Test the submission
+                const success = await submitToGoogleSheets(testData);
+                
+                if (success) {
+                    statusMessage.className = 'status success';
+                    statusMessage.innerHTML = `
+                        <strong>✅ Success!</strong><br>
+                        Test registration submitted successfully. Check your Google Sheet to confirm the data was received.
+                    `;
+                } else {
+                    statusMessage.className = 'status error';
+                    statusMessage.innerHTML = `
+                        <strong>❌ Failed!</strong><br>
+                        Test registration failed. Check the console for error details.
+                    `;
+                }
+                
+                statusMessage.style.display = 'block';
+                
+            } catch (error) {
+                console.error('Test error:', error);
+                statusMessage.className = 'status error';
+                statusMessage.innerHTML = `
+                    <strong>❌ Error!</strong><br>
+                    ${error.message || 'An unknown error occurred'}
+                `;
+                statusMessage.style.display = 'block';
+            } finally {
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.textContent = '🚀 Test Registration';
+            }
+        });
+    </script>
+</body>
+</html>
