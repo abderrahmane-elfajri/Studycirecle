@@ -205,12 +205,12 @@ const translations = {
         'Follow Us': 'Suivez-nous',
         'All rights reserved.': 'Tous droits réservés.',
         // Registration page
-        'Choose Your Plan': 'Choisissez votre plan',
-        'Complete Your Registration': 'Complétez votre inscription',
-        'Need Help?': 'Besoin d\'aide?',
-        'Join hundreds of students transforming their summer into their best investment!': 'Rejoignez des centaines d\'étudiants qui transforment leur été en leur meilleur investissement!',
-        'Save 100 DH!': 'Économisez 100 DH!',
-        'Any questions or special requests...': 'Des questions ou des demandes spéciales...'
+        'Choose Your Plan': 'Choose Your Plan',
+        'Complete Your Registration': 'Complete Your Registration',
+        'Need Help?': 'Need Help?',
+        'Join hundreds of students transforming their summer into their best investment!': 'Join hundreds of students transforming their summer into their best investment!',
+        'Save 100 DH!': 'Save 100 DH!',
+        'Any questions or special requests...': 'Any questions or special requests...'
     },
     
     ar: {
@@ -534,6 +534,46 @@ function toggleMobileMenu() {
     const nav = document.querySelector('.nav');
     nav.classList.toggle('active');
 }
+
+// Mobile navigation functionality
+function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (nav) {
+        nav.classList.toggle('mobile-active');
+        hamburger.classList.toggle('active');
+    }
+}
+
+function closeMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (nav) {
+        nav.classList.remove('mobile-active');
+        hamburger.classList.remove('active');
+    }
+}
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', function(event) {
+    const nav = document.getElementById('mobileNav');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (nav && hamburger && nav.classList.contains('mobile-active')) {
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+            closeMobileNav();
+        }
+    }
+});
+
+// Close mobile nav on window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMobileNav();
+    }
+});
 
 // Add typing effect to hero title
 document.addEventListener('DOMContentLoaded', function() {

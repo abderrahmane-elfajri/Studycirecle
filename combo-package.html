@@ -25,13 +25,18 @@
                 <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="Studycircle" class="logo-img">
                 <h1>Studycircle</h1>
             </div>
-            <nav class="nav">
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav" id="mobileNav">
                 <ul>
-                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="index.html#about" data-en="About" data-fr="À propos" data-ar="حول">About</a></li>
-                    <li><a href="index.html#program" data-en="Program" data-fr="Programme" data-ar="البرنامج">Program</a></li>
-                    <li><a href="index.html#schedule" data-en="Schedule" data-fr="Horaire" data-ar="الجدول">Schedule</a></li>
-                    <li><a href="index.html#pricing" data-en="Pricing" data-fr="Tarifs" data-ar="الأسعار">Pricing</a></li>
+                    <li><a href="index.html" data-en="Home" data-fr="Accueil" data-ar="الرئيسية" onclick="closeMobileNav()">Home</a></li>
+                    <li><a href="index.html#about" data-en="About" data-fr="À propos" data-ar="حول" onclick="closeMobileNav()">About</a></li>
+                    <li><a href="index.html#program" data-en="Program" data-fr="Programme" data-ar="البرنامج" onclick="closeMobileNav()">Program</a></li>
+                    <li><a href="index.html#schedule" data-en="Schedule" data-fr="Horaire" data-ar="الجدول" onclick="closeMobileNav()">Schedule</a></li>
+                    <li><a href="index.html#pricing" data-en="Pricing" data-fr="Tarifs" data-ar="الأسعار" onclick="closeMobileNav()">Pricing</a></li>
                 </ul>
             </nav>
         </div>
