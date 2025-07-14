@@ -538,40 +538,63 @@ function toggleMobileMenu() {
 // Mobile navigation functionality
 function toggleMobileNav() {
     const nav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('mobileMenuOverlay');
     const hamburger = document.querySelector('.hamburger');
     
-    if (nav) {
-        nav.classList.toggle('mobile-active');
+    console.log('Toggle mobile nav called');
+    console.log('Nav element:', nav);
+    console.log('Overlay element:', overlay);
+    console.log('Hamburger element:', hamburger);
+    
+    if (nav && overlay && hamburger) {
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
         hamburger.classList.toggle('active');
+        
+        console.log('Nav has active class:', nav.classList.contains('active'));
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    } else {
+        console.error('One or more elements not found!');
     }
 }
 
 function closeMobileNav() {
     const nav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('mobileMenuOverlay');
     const hamburger = document.querySelector('.hamburger');
     
-    if (nav) {
-        nav.classList.remove('mobile-active');
+    if (nav && overlay && hamburger) {
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
         hamburger.classList.remove('active');
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
     }
 }
 
-// Close mobile nav when clicking outside
+// Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
     const nav = document.getElementById('mobileNav');
     const hamburger = document.querySelector('.hamburger');
     
-    if (nav && hamburger && nav.classList.contains('mobile-active')) {
+    if (nav && hamburger && nav.classList.contains('active')) {
+        // Check if click is outside the nav and hamburger
         if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
             closeMobileNav();
         }
     }
 });
 
-// Close mobile nav on window resize
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        closeMobileNav();
+// Prevent menu close when clicking inside the nav
+document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.getElementById('mobileNav');
+    if (nav) {
+        nav.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
     }
 });
 
@@ -729,15 +752,12 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5hRtR52Guyi
 
 // Plan selection functionality
 function selectPlan(planName) {
-    selectedPlan = planName;
-    
     // Remove selected class from all cards
-    const cards = document.querySelectorAll('.plan-selection .pricing-card');
+    const cards = document.querySelectorAll('.pricing-card');
     cards.forEach(card => card.classList.remove('selected'));
     
     // Add selected class to clicked card
-    const clickedCard = event.currentTarget;
-    clickedCard.classList.add('selected');
+    event.target.closest('.pricing-card').classList.add('selected');
     
     // Update the select dropdown
     const planSelect = document.getElementById('plan');
