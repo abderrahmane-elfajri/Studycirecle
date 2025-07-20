@@ -11,7 +11,7 @@
 <body>
     <!-- Language Selector -->
     <div class="language-selector">
-        <select id="languageSelect" onchange="changeLanguage()">
+        <select id="languageSelect" onchange="changeLanguage()" title="Select Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
@@ -52,14 +52,14 @@
             <div class="plan-header">
                 <h1>🔥 <span data-en="Combo Package" data-fr="Package Combo" data-ar="باقة مجمعة">Combo Package</span></h1>
                 <div class="plan-price">
-                    <span class="old-price">1100 DH</span>
-                    <span class="new-price">1000 DH</span>
+                    <span class="new-price">1100 DH</span>
                 </div>
-                <p data-en="Get both Bac Track and Skills Track at a special discounted price - Save 100 DH!" 
-                   data-fr="Obtenez à la fois le Parcours Bac et le Parcours Compétences à un prix réduit spécial - Économisez 100 DH!" 
-                   data-ar="احصل على كل من مسار البكالوريا ومسار المهارات بسعر مخفض خاص - وفر 100 درهم!">
-                    Get both Bac Track and Skills Track at a special discounted price - Save 100 DH!
+                <p data-en="Get both Bac Track and Skills Track plus bonus access to premium Udemy courses!" 
+                   data-fr="Obtenez à la fois le Parcours Bac et le Parcours Compétences plus l'accès bonus aux cours Udemy premium!" 
+                   data-ar="احصل على كل من مسار البكالوريا ومسار المهارات بالإضافة إلى الوصول الإضافي لدورات Udemy المميزة!">
+                    Get both Bac Track and Skills Track plus bonus access to premium Udemy courses!
                 </p>
+                <p class="combo-note" data-en="*Training plan can be customized based on your individual needs and preferences" data-fr="*Le plan de formation peut être personnalisé selon vos besoins et préférences individuels" data-ar="*يمكن تخصيص خطة التدريب حسب احتياجاتك وتفضيلاتك الفردية">*Training plan can be customized based on your individual needs and preferences</p>
             </div>
 
             <div class="plan-content">
@@ -67,12 +67,12 @@
                     <h2>🎯 <span data-en="Why Choose the Combo?" data-fr="Pourquoi choisir le Combo?" data-ar="لماذا تختار الباقة المجمعة؟">Why Choose the Combo?</span></h2>
                     <div class="advantages-grid">
                         <div class="advantage-card">
-                            <i class="fas fa-percentage"></i>
-                            <h3 data-en="Save Money" data-fr="Économisez de l'argent" data-ar="وفر المال">Save Money</h3>
-                            <p data-en="Get 100 DH discount when you choose both tracks together"
-                               data-fr="Obtenez 100 DH de réduction quand vous choisissez les deux parcours ensemble"
-                               data-ar="احصل على خصم 100 درهم عند اختيار كلا المسارين معًا">
-                                Get 100 DH discount when you choose both tracks together
+                            <i class="fas fa-gift"></i>
+                            <h3 data-en="Bonus Udemy Access" data-fr="Accès bonus Udemy" data-ar="وصول إضافي لـ Udemy">Bonus Udemy Access</h3>
+                            <p data-en="Get premium access to additional Udemy courses to expand your learning"
+                               data-fr="Obtenez un accès premium aux cours Udemy supplémentaires pour élargir votre apprentissage"
+                               data-ar="احصل على وصول مميز لدورات Udemy الإضافية لتوسيع تعلمك">
+                                Get premium access to additional Udemy courses to expand your learning
                             </p>
                         </div>
                         <div class="advantage-card">
@@ -171,11 +171,7 @@
                                 data-ar="وصول أولوي لجميع الجلسات">
                                 Priority access to all sessions
                             </li>
-                            <li data-en="One-on-one mentorship session"
-                                data-fr="Session de mentorat individuelle"
-                                data-ar="جلسة إرشاد فردية">
-                                One-on-one mentorship session
-                            </li>
+
                             <li data-en="Exclusive study materials and resources"
                                 data-fr="Matériaux d'étude et ressources exclusifs"
                                 data-ar="مواد وموارد دراسية حصرية">
@@ -192,6 +188,7 @@
 
                 <div class="plan-schedule">
                     <h2>📅 <span data-en="Your Complete Weekly Schedule" data-fr="Votre horaire hebdomadaire complet" data-ar="جدولك الأسبوعي الكامل">Your Complete Weekly Schedule</span></h2>
+                    <p class="schedule-note" data-en="*This schedule is flexible and can be adjusted based on student preferences and availability." data-fr="*Cet horaire est flexible et peut être ajusté selon les préférences et la disponibilité des étudiants." data-ar="*هذا الجدول مرن ويمكن تعديله حسب تفضيلات الطلاب وتوفرهم.">*This schedule is flexible and can be adjusted based on student preferences and availability.</p>
                     <div class="schedule-table">
                         <div class="schedule-row">
                             <div class="day">Monday</div>
@@ -285,12 +282,10 @@
                     </p>
                     <div class="combo-price-highlight">
                         <span class="price-label" data-en="Special Combo Price:" data-fr="Prix Combo Spécial:" data-ar="سعر الباقة المجمعة الخاص:">Special Combo Price:</span>
-                        <span class="old-price">1100 DH</span>
-                        <span class="new-price">1000 DH</span>
-                        <span class="savings" data-en="Save 100 DH!" data-fr="Économisez 100 DH!" data-ar="وفر 100 درهم!">Save 100 DH!</span>
+                        <span class="new-price">1100 DH</span>
                     </div>
                     <button class="btn btn-primary btn-register" onclick="openRegistrationForm('Combo Package')">
-                        👉 <span data-en="Register Now - 1000 DH" data-fr="S'inscrire maintenant - 1000 DH" data-ar="سجل الآن - 1000 درهم">Register Now - 1000 DH</span>
+                        👉 <span data-en="Register Now - 1100 DH" data-fr="S'inscrire maintenant - 1100 DH" data-ar="سجل الآن - 1100 درهم">Register Now - 1100 DH</span>
                     </button>
                 </div>
             </div>

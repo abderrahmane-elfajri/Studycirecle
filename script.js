@@ -74,9 +74,13 @@ const translations = {
         'Start Date': 'Start Date',
         'End Date': 'End Date',
         'Format': 'Format',
-        'July 21st, 2025': 'July 21st, 2025',
-        'September 5th, 2025': 'September 5th, 2025',
+        'July 28th, 2025': 'July 28th, 2025',
+        'August 6th, 2025': 'August 6th, 2025',
         '100% Online': '100% Online',
+        
+        // Schedule notes
+        '*Schedule is not finalized yet - these times are examples and may be adjusted based on student preferences.': '*Schedule is not finalized yet - these times are examples and may be adjusted based on student preferences.',
+        '*This schedule is flexible and can be adjusted based on student preferences and availability.': '*This schedule is flexible and can be adjusted based on student preferences and availability.',
         
         // FAQ section
         'Frequently Asked Questions': 'Frequently Asked Questions',
@@ -85,7 +89,7 @@ const translations = {
         'Can I pay in installments?': 'Can I pay in installments?',
         'Yes, you can pay in multiple installments. Contact us for details.': 'Yes, you can pay in multiple installments. Contact us for details.',
         'Can I join both tracks?': 'Can I join both tracks?',
-        'Yes! We even have a special combo price for both tracks.': 'Yes! We even have a special combo price for both tracks.',
+        'Yes! And we will make sure that both tracks happen at different times.': 'Yes! And we will make sure that both tracks happen at different times.',
         'Will I get a certificate?': 'Will I get a certificate?',
         'Yes, you\'ll receive a certificate you can add to your CV or portfolio.': 'Yes, you\'ll receive a certificate you can add to your CV or portfolio.',
         
@@ -99,6 +103,24 @@ const translations = {
         'Contact': 'Contact',
         'Follow Us': 'Follow Us',
         'All rights reserved.': 'All rights reserved.',
+        
+        // New Bac Track content
+        '🔴 Live sessions in Maths and Physics (4 sessions per week)': '🔴 Live sessions in Maths and Physics (4 sessions per week)',
+        '📝 Group exercise sessions with detailed corrections and explanations': '📝 Group exercise sessions with detailed corrections and explanations',
+        '🎯 Two flexible levels, based on your current skills, so nothing is too easy or too hard — and you can switch between levels whenever you want': '🎯 Two flexible levels, based on your current skills, so nothing is too easy or too hard — and you can switch between levels whenever you want',
+        '📹 Recorded sessions available anytime, including whiteboard explanations so you can review lessons at your own pace': '📹 Recorded sessions available anytime, including whiteboard explanations so you can review lessons at your own pace',
+        '🏆 High-quality study materials to help you prepare for the school year (lesson PDFs and practice exercises)': '🏆 High-quality study materials to help you prepare for the school year (lesson PDFs and practice exercises)',
+        '📅 Post-bac insights through live sessions featuring students from various universities': '📅 Post-bac insights through live sessions featuring students from various universities',
+        
+        // New Skills Track content
+        '💻 Python — learn the fundamentals of programming from scratch': '💻 Python — learn the fundamentals of programming from scratch',
+        '📝 C++ — create practical, real-world applications': '📝 C++ — create practical, real-world applications',
+        '🤖 Robotics — explore Arduino basics, circuits, and an introduction to mechatronics': '🤖 Robotics — explore Arduino basics, circuits, and an introduction to mechatronics',
+        '🎨 AI Tools — discover how to integrate AI effectively into everyday tasks': '🎨 AI Tools — discover how to integrate AI effectively into everyday tasks',
+        '🎬 Video Editing & Graphic Design — master creative tools to produce professional visuals and videos': '🎬 Video Editing & Graphic Design — master creative tools to produce professional visuals and videos',
+        '💼 Freelancing & Business Skills — learn how to land your first freelance job and build a strong portfolio': '💼 Freelancing & Business Skills — learn how to land your first freelance job and build a strong portfolio',
+        '🚀 Real Projects — work on hands-on projects to enrich your portfolio': '🚀 Real Projects — work on hands-on projects to enrich your portfolio',
+        'Perfect for students who want to explore valuable, marketable skills and start building a strong portfolio for their future career — with introductory courses designed to help you discover each field.': 'Perfect for students who want to explore valuable, marketable skills and start building a strong portfolio for their future career — with introductory courses designed to help you discover each field.',
         // Registration page
         'Choose Your Plan': 'Choose Your Plan',
         'Complete Your Registration': 'Complete Your Registration',
@@ -179,9 +201,13 @@ const translations = {
         'Start Date': 'Date de début',
         'End Date': 'Date de fin',
         'Format': 'Format',
-        'July 21st, 2025': '21 juillet 2025',
-        'September 5th, 2025': '5 septembre 2025',
+        'July 28th, 2025': '28 juillet 2025',
+        'August 6th, 2025': '6 août 2025',
         '100% Online': '100% en ligne',
+        
+        // Schedule notes
+        '*Schedule is not finalized yet - these times are examples and may be adjusted based on student preferences.': '*L\'horaire n\'est pas encore finalisé - ces heures sont des exemples et peuvent être ajustées selon les préférences des étudiants.',
+        '*This schedule is flexible and can be adjusted based on student preferences and availability.': '*Cet horaire est flexible et peut être ajusté selon les préférences et la disponibilité des étudiants.',
         
         // FAQ section
         'Frequently Asked Questions': 'Questions fréquemment posées',
@@ -190,7 +216,7 @@ const translations = {
         'Can I pay in installments?': 'Puis-je payer en plusieurs fois?',
         'Yes, you can pay in multiple installments. Contact us for details.': 'Oui, vous pouvez payer en plusieurs versements. Contactez-nous pour plus de détails.',
         'Can I join both tracks?': 'Puis-je rejoindre les deux parcours?',
-        'Yes! We even have a special combo price for both tracks.': 'Oui! Nous avons même un prix combo spécial pour les deux parcours.',
+        'Yes! And we will make sure that both tracks happen at different times.': 'Oui! Et nous nous assurerons que les deux parcours se déroulent à des moments différents.',
         'Will I get a certificate?': 'Vais-je recevoir un certificat?',
         'Yes, you\'ll receive a certificate you can add to your CV or portfolio.': 'Oui, vous recevrez un certificat que vous pouvez ajouter à votre CV ou portfolio.',
         
@@ -204,6 +230,24 @@ const translations = {
         'Contact': 'Contact',
         'Follow Us': 'Suivez-nous',
         'All rights reserved.': 'Tous droits réservés.',
+        
+        // New Bac Track content
+        '🔴 Live sessions in Maths and Physics (4 sessions per week)': '🔴 Sessions en direct en Maths et Physique (4 sessions par semaine)',
+        '📝 Group exercise sessions with detailed corrections and explanations': '📝 Sessions d\'exercices en groupe avec corrections détaillées et explications',
+        '🎯 Two flexible levels, based on your current skills, so nothing is too easy or too hard — and you can switch between levels whenever you want': '🎯 Deux niveaux flexibles, basés sur vos compétences actuelles, pour que rien ne soit trop facile ou trop difficile — et vous pouvez changer de niveau quand vous le souhaitez',
+        '📹 Recorded sessions available anytime, including whiteboard explanations so you can review lessons at your own pace': '📹 Sessions enregistrées disponibles à tout moment, y compris les explications au tableau pour que vous puissiez réviser les leçons à votre rythme',
+        '🏆 High-quality study materials to help you prepare for the school year (lesson PDFs and practice exercises)': '🏆 Matériaux d\'étude de haute qualité pour vous aider à vous préparer pour l\'année scolaire (PDFs de leçons et exercices pratiques)',
+        '📅 Post-bac insights through live sessions featuring students from various universities': '📅 Aperçus post-bac grâce à des sessions en direct avec des étudiants de diverses universités',
+        
+        // New Skills Track content
+        '💻 Python — learn the fundamentals of programming from scratch': '💻 Python — apprenez les fondamentaux de la programmation à partir de zéro',
+        '📝 C++ — create practical, real-world applications': '📝 C++ — créez des applications pratiques du monde réel',
+        '🤖 Robotics — explore Arduino basics, circuits, and an introduction to mechatronics': '🤖 Robotique — explorez les bases d\'Arduino, les circuits, et une introduction à la mécatronique',
+        '🎨 AI Tools — discover how to integrate AI effectively into everyday tasks': '🎨 Outils IA — découvrez comment intégrer efficacement l\'IA dans les tâches quotidiennes',
+        '🎬 Video Editing & Graphic Design — master creative tools to produce professional visuals and videos': '🎬 Montage vidéo et design graphique — maîtrisez les outils créatifs pour produire des visuels et vidéos professionnels',
+        '💼 Freelancing & Business Skills — learn how to land your first freelance job and build a strong portfolio': '💼 Freelancing et compétences commerciales — apprenez comment décrocher votre premier emploi freelance et créer un portfolio solide',
+        '🚀 Real Projects — work on hands-on projects to enrich your portfolio': '🚀 Projets réels — travaillez sur des projets pratiques pour enrichir votre portfolio',
+        'Perfect for students who want to explore valuable, marketable skills and start building a strong portfolio for their future career — with introductory courses designed to help you discover each field.': 'Parfait pour les étudiants qui veulent explorer des compétences précieuses et commercialisables et commencer à créer un portfolio solide pour leur future carrière — avec des cours d\'introduction conçus pour vous aider à découvrir chaque domaine.',
         // Registration page
         'Choose Your Plan': 'Choose Your Plan',
         'Complete Your Registration': 'Complete Your Registration',
@@ -284,9 +328,13 @@ const translations = {
         'Start Date': 'تاريخ البداية',
         'End Date': 'تاريخ الانتهاء',
         'Format': 'الشكل',
-        'July 21st, 2025': '21 يوليو 2025',
-        'September 5th, 2025': '5 سبتمبر 2025',
+        'July 28th, 2025': '28 يوليو 2025',
+        'August 6th, 2025': '6 أغسطس 2025',
         '100% Online': '100% عبر الإنترنت',
+        
+        // Schedule notes
+        '*Schedule is not finalized yet - these times are examples and may be adjusted based on student preferences.': '*الجدول غير مكتمل بعد - هذه الأوقات أمثلة ويمكن تعديلها حسب تفضيلات الطلاب.',
+        '*This schedule is flexible and can be adjusted based on student preferences and availability.': '*هذا الجدول مرن ويمكن تعديله حسب تفضيلات الطلاب وتوفرهم.',
         
         // FAQ section
         'Frequently Asked Questions': 'الأسئلة المتكررة',
@@ -295,7 +343,7 @@ const translations = {
         'Can I pay in installments?': 'هل يمكنني الدفع على أقساط؟',
         'Yes, you can pay in multiple installments. Contact us for details.': 'نعم، يمكنك الدفع على أقساط متعددة. اتصل بنا للحصول على التفاصيل.',
         'Can I join both tracks?': 'هل يمكنني الانضمام إلى كلا المسارين؟',
-        'Yes! We even have a special combo price for both tracks.': 'نعم! لدينا حتى سعر خاص مجمع لكلا المسارين.',
+        'Yes! And we will make sure that both tracks happen at different times.': 'نعم! وسنتأكد من أن كلا المسارين يحدثان في أوقات مختلفة.',
         'Will I get a certificate?': 'هل سأحصل على شهادة؟',
         'Yes, you\'ll receive a certificate you can add to your CV or portfolio.': 'نعم، ستحصل على شهادة يمكنك إضافتها إلى سيرتك الذاتية أو محفظتك.',
         
@@ -309,6 +357,24 @@ const translations = {
         'Contact': 'اتصل',
         'Follow Us': 'تابعنا',
         'All rights reserved.': 'جميع الحقوق محفوظة.',
+        
+        // New Bac Track content
+        '🔴 Live sessions in Maths and Physics (4 sessions per week)': '🔴 جلسات مباشرة في الرياضيات والفيزياء (4 جلسات في الأسبوع)',
+        '📝 Group exercise sessions with detailed corrections and explanations': '📝 جلسات تمارين جماعية مع تصحيحات مفصلة وشروحات',
+        '🎯 Two flexible levels, based on your current skills, so nothing is too easy or too hard — and you can switch between levels whenever you want': '🎯 مستويان مرنان، بناءً على مهاراتك الحالية، بحيث لا يكون شيء سهلاً جداً أو صعباً جداً — ويمكنك التبديل بين المستويات متى شئت',
+        '📹 Recorded sessions available anytime, including whiteboard explanations so you can review lessons at your own pace': '📹 جلسات مسجلة متاحة في أي وقت، بما في ذلك شروحات السبورة حتى تتمكن من مراجعة الدروس بالسرعة التي تناسبك',
+        '🏆 High-quality study materials to help you prepare for the school year (lesson PDFs and practice exercises)': '🏆 مواد دراسية عالية الجودة لمساعدتك في التحضير للسنة الدراسية (ملفات PDF للدروس وتمارين تطبيقية)',
+        '📅 Post-bac insights through live sessions featuring students from various universities': '📅 نظرات ما بعد البكالوريا من خلال جلسات مباشرة مع طلاب من جامعات مختلفة',
+        
+        // New Skills Track content
+        '💻 Python — learn the fundamentals of programming from scratch': '💻 Python — تعلم أساسيات البرمجة من الصفر',
+        '📝 C++ — create practical, real-world applications': '📝 C++ — أنشئ تطبيقات عملية من العالم الحقيقي',
+        '🤖 Robotics — explore Arduino basics, circuits, and an introduction to mechatronics': '🤖 الروبوتات — استكشف أساسيات Arduino والدوائر ومقدمة في الميكاترونيكا',
+        '🎨 AI Tools — discover how to integrate AI effectively into everyday tasks': '🎨 أدوات الذكاء الاصطناعي — اكتشف كيفية دمج الذكاء الاصطناعي بفعالية في المهام اليومية',
+        '🎬 Video Editing & Graphic Design — master creative tools to produce professional visuals and videos': '🎬 تحرير الفيديو والتصميم الجرافيكي — إتقان الأدوات الإبداعية لإنتاج مرئيات وفيديوهات احترافية',
+        '💼 Freelancing & Business Skills — learn how to land your first freelance job and build a strong portfolio': '💼 العمل الحر والمهارات التجارية — تعلم كيفية الحصول على أول وظيفة حرة وبناء محفظة قوية',
+        '🚀 Real Projects — work on hands-on projects to enrich your portfolio': '🚀 مشاريع حقيقية — اعمل على مشاريع عملية لإثراء محفظتك',
+        'Perfect for students who want to explore valuable, marketable skills and start building a strong portfolio for their future career — with introductory courses designed to help you discover each field.': 'مثالي للطلاب الذين يريدون استكشاف مهارات قيمة وقابلة للتسويق وبدء بناء محفظة قوية لمستقبلهم المهني — مع دورات تمهيدية مصممة لمساعدتك على اكتشاف كل مجال.',
         // Registration page
         'Choose Your Plan': 'اختر خطتك',
         'Complete Your Registration': 'أكمل تسجيلك',
@@ -325,6 +391,9 @@ function changeLanguage() {
     const selectedLanguage = select.value;
     currentLanguage = selectedLanguage;
     
+    // Store language preference in localStorage
+    localStorage.setItem('selectedLanguage', selectedLanguage);
+    
     // Update document language and direction
     document.documentElement.lang = selectedLanguage;
     if (selectedLanguage === 'ar') {
@@ -337,6 +406,35 @@ function changeLanguage() {
     
     // Update all translatable elements
     updateTranslations();
+}
+
+// Function to load saved language preference
+function loadLanguagePreference() {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+        currentLanguage = savedLanguage;
+        const select = document.getElementById('languageSelect');
+        if (select) {
+            select.value = savedLanguage;
+        }
+        
+        // Update document language and direction
+        document.documentElement.lang = savedLanguage;
+        if (savedLanguage === 'ar') {
+            document.documentElement.dir = 'rtl';
+            document.body.classList.add('rtl');
+        } else {
+            document.documentElement.dir = 'ltr';
+            document.body.classList.remove('rtl');
+        }
+        
+        // Update translations after DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateTranslations);
+        } else {
+            updateTranslations();
+        }
+    }
 }
 
 // Function to update translations
@@ -1050,5 +1148,11 @@ Object.keys(registrationTranslations).forEach(lang => {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    initializeRegistrationPage();
+    // Load language preference first
+    loadLanguagePreference();
+    
+    // Initialize registration page if elements exist
+    if (document.querySelector('.plan-selection') || document.querySelector('#registrationForm')) {
+        initializeRegistrationPage();
+    }
 });

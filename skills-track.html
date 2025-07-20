@@ -11,7 +11,7 @@
 <body>
     <!-- Language Selector -->
     <div class="language-selector">
-        <select id="languageSelect" onchange="changeLanguage()">
+        <select id="languageSelect" onchange="changeLanguage()" title="Select Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="ar">العربية</option>
@@ -65,74 +65,65 @@
                     <div class="features-grid">
                         <div class="feature-card">
                             <i class="fas fa-code"></i>
-                            <h3 data-en="Programming" data-fr="Programmation" data-ar="البرمجة">Programming</h3>
-                            <p data-en="Learn the fundamentals of coding with popular languages like Python and JavaScript"
-                               data-fr="Apprenez les fondamentaux du codage avec des langages populaires comme Python et JavaScript"
-                               data-ar="تعلم أساسيات البرمجة بلغات شائعة مثل Python و JavaScript">
-                                Learn the fundamentals of coding with popular languages like Python and JavaScript
+                            <h3 data-en="Python" data-fr="Python" data-ar="Python">Python</h3>
+                            <p data-en="Learn the fundamentals of programming from scratch"
+                               data-fr="Apprenez les fondamentaux de la programmation à partir de zéro"
+                               data-ar="تعلم أساسيات البرمجة من الصفر">
+                                Learn the fundamentals of programming from scratch
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3 data-en="C++" data-fr="C++" data-ar="C++">C++</h3>
+                            <p data-en="Create practical, real-world applications"
+                               data-fr="Créez des applications pratiques du monde réel"
+                               data-ar="أنشئ تطبيقات عملية من العالم الحقيقي">
+                                Create practical, real-world applications
                             </p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-robot"></i>
                             <h3 data-en="Robotics" data-fr="Robotique" data-ar="الروبوتات">Robotics</h3>
-                            <p data-en="Explore the exciting world of robotics and automation"
-                               data-fr="Explorez le monde passionnant de la robotique et de l'automatisation"
-                               data-ar="استكشف عالم الروبوتات والأتمتة المثير">
-                                Explore the exciting world of robotics and automation
-                            </p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-shield-alt"></i>
-                            <h3 data-en="Cybersecurity" data-fr="Cybersécurité" data-ar="الأمن السيبراني">Cybersecurity</h3>
-                            <p data-en="Understand digital security and protect yourself online"
-                               data-fr="Comprenez la sécurité numérique et protégez-vous en ligne"
-                               data-ar="فهم الأمن الرقمي وحماية نفسك على الإنترنت">
-                                Understand digital security and protect yourself online
+                            <p data-en="Explore Arduino basics, circuits, and an introduction to mechatronics"
+                               data-fr="Explorez les bases d'Arduino, les circuits, et une introduction à la mécatronique"
+                               data-ar="استكشف أساسيات Arduino والدوائر ومقدمة في الميكاترونيكا">
+                                Explore Arduino basics, circuits, and an introduction to mechatronics
                             </p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-brain"></i>
                             <h3 data-en="AI Tools" data-fr="Outils IA" data-ar="أدوات الذكاء الاصطناعي">AI Tools</h3>
-                            <p data-en="Master modern AI tools and applications for productivity"
-                               data-fr="Maîtrisez les outils et applications IA modernes pour la productivité"
-                               data-ar="إتقان أدوات وتطبيقات الذكاء الاصطناعي الحديثة للإنتاجية">
-                                Master modern AI tools and applications for productivity
-                            </p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-laptop"></i>
-                            <h3 data-en="Freelancing" data-fr="Freelancing" data-ar="العمل الحر">Freelancing</h3>
-                            <p data-en="Learn how to start your own freelance business and earn money online"
-                               data-fr="Apprenez comment démarrer votre propre entreprise freelance et gagner de l'argent en ligne"
-                               data-ar="تعلم كيفية بدء عملك الحر الخاص وكسب المال عبر الإنترنت">
-                                Learn how to start your own freelance business and earn money online
+                            <p data-en="Discover how to integrate AI effectively into everyday tasks"
+                               data-fr="Découvrez comment intégrer efficacement l'IA dans les tâches quotidiennes"
+                               data-ar="اكتشف كيفية دمج الذكاء الاصطناعي بفعالية في المهام اليومية">
+                                Discover how to integrate AI effectively into everyday tasks
                             </p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-video"></i>
-                            <h3 data-en="Video Editing" data-fr="Montage vidéo" data-ar="تحرير الفيديو">Video Editing</h3>
-                            <p data-en="Create professional videos with industry-standard editing techniques"
-                               data-fr="Créez des vidéos professionnelles avec des techniques d'édition standard de l'industrie"
-                               data-ar="إنشاء مقاطع فيديو احترافية بتقنيات التحرير المعيارية في الصناعة">
-                                Create professional videos with industry-standard editing techniques
+                            <h3 data-en="Video Editing & Graphic Design" data-fr="Montage vidéo et design graphique" data-ar="تحرير الفيديو والتصميم الجرافيكي">Video Editing & Graphic Design</h3>
+                            <p data-en="Master creative tools to produce professional visuals and videos"
+                               data-fr="Maîtrisez les outils créatifs pour produire des visuels et vidéos professionnels"
+                               data-ar="إتقان الأدوات الإبداعية لإنتاج مرئيات وفيديوهات احترافية">
+                                Master creative tools to produce professional visuals and videos
                             </p>
                         </div>
                         <div class="feature-card">
-                            <i class="fas fa-paint-brush"></i>
-                            <h3 data-en="Graphic Design" data-fr="Design graphique" data-ar="التصميم الجرافيكي">Graphic Design</h3>
-                            <p data-en="Design stunning graphics and visual content for digital platforms"
-                               data-fr="Concevez des graphiques époustouflants et du contenu visuel pour les plateformes numériques"
-                               data-ar="تصميم رسومات مذهلة ومحتوى بصري للمنصات الرقمية">
-                                Design stunning graphics and visual content for digital platforms
+                            <i class="fas fa-laptop"></i>
+                            <h3 data-en="Freelancing & Business Skills" data-fr="Freelancing et compétences commerciales" data-ar="العمل الحر والمهارات التجارية">Freelancing & Business Skills</h3>
+                            <p data-en="Learn how to land your first freelance job and build a strong portfolio"
+                               data-fr="Apprenez comment décrocher votre premier emploi freelance et créer un portfolio solide"
+                               data-ar="تعلم كيفية الحصول على أول وظيفة حرة وبناء محفظة قوية">
+                                Learn how to land your first freelance job and build a strong portfolio
                             </p>
                         </div>
                         <div class="feature-card">
                             <i class="fas fa-project-diagram"></i>
-                            <h3 data-en="Portfolio Projects" data-fr="Projets de portfolio" data-ar="مشاريع المحفظة">Portfolio Projects</h3>
-                            <p data-en="Build real projects that showcase your skills to potential employers"
-                               data-fr="Construisez de vrais projets qui mettent en valeur vos compétences aux employeurs potentiels"
-                               data-ar="بناء مشاريع حقيقية تُظهر مهاراتك لأصحاب العمل المحتملين">
-                                Build real projects that showcase your skills to potential employers
+                            <h3 data-en="Real Projects" data-fr="Projets réels" data-ar="مشاريع حقيقية">Real Projects</h3>
+                            <p data-en="Work on hands-on projects to enrich your portfolio"
+                               data-fr="Travaillez sur des projets pratiques pour enrichir votre portfolio"
+                               data-ar="اعمل على مشاريع عملية لإثراء محفظتك">
+                                Work on hands-on projects to enrich your portfolio
                             </p>
                         </div>
                     </div>
@@ -140,6 +131,7 @@
 
                 <div class="plan-schedule">
                     <h2>📅 <span data-en="Your Weekly Schedule" data-fr="Votre horaire hebdomadaire" data-ar="جدولك الأسبوعي">Your Weekly Schedule</span></h2>
+                    <p class="schedule-note" data-en="*This schedule is flexible and can be adjusted based on student preferences and availability." data-fr="*Cet horaire est flexible et peut être ajusté selon les préférences et la disponibilité des étudiants." data-ar="*هذا الجدول مرن ويمكن تعديله حسب تفضيلات الطلاب وتوفرهم.">*This schedule is flexible and can be adjusted based on student preferences and availability.</p>
                     <div class="schedule-table">
                         <div class="schedule-row">
                             <div class="day">Monday</div>
@@ -177,27 +169,32 @@
                 <div class="plan-benefits">
                     <h2>🎯 <span data-en="Why Choose Skills Track?" data-fr="Pourquoi choisir le Parcours Compétences?" data-ar="لماذا تختار مسار المهارات؟">Why Choose Skills Track?</span></h2>
                     <ul class="benefits-list">
-                        <li data-en="Industry-relevant skills that employers are looking for"
-                            data-fr="Compétences pertinentes pour l'industrie que les employeurs recherchent"
-                            data-ar="مهارات ذات صلة بالصناعة يبحث عنها أصحاب العمل">
-                            Industry-relevant skills that employers are looking for
+                        <li data-en="🎯 Explore in-demand fields and discover what truly interests you"
+                            data-fr="🎯 Explorez les domaines demandés et découvrez ce qui vous intéresse vraiment"
+                            data-ar="🎯 استكشف المجالات المطلوبة واكتشف ما يهمك حقاً">
+                            🎯 Explore in-demand fields and discover what truly interests you
                         </li>
-                        <li data-en="Hands-on projects that build your portfolio"
-                            data-fr="Projets pratiques qui construisent votre portfolio"
-                            data-ar="مشاريع عملية تبني محفظتك">
-                            Hands-on projects that build your portfolio
+                        <li data-en="🛠 Introductory hands-on projects to try out different domains and build confidence"
+                            data-fr="🛠 Projets pratiques d'introduction pour essayer différents domaines et renforcer la confiance"
+                            data-ar="🛠 مشاريع عملية تمهيدية لتجربة مجالات مختلفة وبناء الثقة">
+                            🛠 Introductory hands-on projects to try out different domains and build confidence
                         </li>
-                        <li data-en="Learn from industry professionals and experts"
-                            data-fr="Apprenez de professionnels et d'experts de l'industrie"
-                            data-ar="تعلم من المهنيين والخبراء في الصناعة">
-                            Learn from industry professionals and experts
+                        <li data-en="🎓 Learn from professionals and passionate experts who will guide your first steps"
+                            data-fr="🎓 Apprenez de professionnels et d'experts passionnés qui guideront vos premiers pas"
+                            data-ar="🎓 تعلم من المهنيين والخبراء المتحمسين الذين سيوجهون خطواتك الأولى">
+                            🎓 Learn from professionals and passionate experts who will guide your first steps
                         </li>
-                        <li data-en="Networking opportunities with like-minded peers"
-                            data-fr="Opportunités de réseautage avec des pairs partageant les mêmes idées"
-                            data-ar="فرص التواصل مع الأقران ذوي التفكير المماثل">
-                            Networking opportunities with like-minded peers
+                        <li data-en="🤝 Connect with curious, motivated peers who are also exploring their paths"
+                            data-fr="🤝 Connectez-vous avec des pairs curieux et motivés qui explorent également leurs voies"
+                            data-ar="🤝 تواصل مع أقران فضوليين ومحفزين يستكشفون أيضاً مساراتهم">
+                            🤝 Connect with curious, motivated peers who are also exploring their paths
                         </li>
-                        <li data-en="Certificate of completion to boost your resume"
+                        <li data-en="📜 Certificate of completion to recognize your effort and help shape your academic journey"
+                            data-fr="📜 Certificat de completion pour reconnaître vos efforts et aider à façonner votre parcours académique"
+                            data-ar="📜 شهادة إتمام للاعتراف بجهدك ومساعدتك في تشكيل رحلتك الأكاديمية">
+                            📜 Certificate of completion to recognize your effort and help shape your academic journey
+                        </li>
+                    </ul>
                             data-fr="Certificat de completion pour renforcer votre CV"
                             data-ar="شهادة إتمام لتعزيز سيرتك الذاتية">
                             Certificate of completion to boost your resume
