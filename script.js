@@ -1119,7 +1119,9 @@ const registrationTranslations = {
         'Need Help?': 'Need Help?',
         'Join hundreds of students transforming their summer into their best investment!': 'Join hundreds of students transforming their summer into their best investment!',
         'Save 100 DH!': 'Save 100 DH!',
-        'Any questions or special requests...': 'Any questions or special requests...'
+        'Any questions or special requests...': 'Any questions or special requests...',
+        'Bonus Udemy courses access': 'Bonus Udemy courses access',
+        'Customizable training plan': 'Customizable training plan'
     },
     fr: {
         'Choose Your Plan': 'Choisissez votre plan',
@@ -1127,7 +1129,9 @@ const registrationTranslations = {
         'Need Help?': 'Besoin d\'aide?',
         'Join hundreds of students transforming their summer into their best investment!': 'Rejoignez des centaines d\'étudiants qui transforment leur été en leur meilleur investissement!',
         'Save 100 DH!': 'Économisez 100 DH!',
-        'Any questions or special requests...': 'Des questions ou des demandes spéciales...'
+        'Any questions or special requests...': 'Des questions ou des demandes spéciales...',
+        'Bonus Udemy courses access': 'Accès bonus aux cours Udemy',
+        'Customizable training plan': 'Plan de formation personnalisable'
     },
     ar: {
         'Choose Your Plan': 'اختر خطتك',
@@ -1135,7 +1139,9 @@ const registrationTranslations = {
         'Need Help?': 'تحتاج مساعدة؟',
         'Join hundreds of students transforming their summer into their best investment!': 'انضم إلى مئات الطلاب الذين يحولون صيفهم إلى أفضل استثمار لهم!',
         'Save 100 DH!': 'وفر 100 درهم!',
-        'Any questions or special requests...': 'أي أسئلة أو طلبات خاصة...'
+        'Any questions or special requests...': 'أي أسئلة أو طلبات خاصة...',
+        'Bonus Udemy courses access': 'وصول إضافي لدورات Udemy',
+        'Customizable training plan': 'خطة تدريب قابلة للتخصيص'
     }
 };
 
