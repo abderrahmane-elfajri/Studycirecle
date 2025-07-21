@@ -1034,6 +1034,20 @@ function getTranslatedText(key, defaultText) {
 function initializeRegistrationPage() {
     // Check if we're on the registration page
     if (window.location.pathname.includes('register.html')) {
+        // Handle URL parameters to pre-select plan
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedPlan = urlParams.get('plan');
+        
+        if (selectedPlan) {
+            const planSelect = document.getElementById('plan');
+            if (planSelect) {
+                // Wait a bit for the page to fully load before setting the value
+                setTimeout(() => {
+                    planSelect.value = selectedPlan;
+                }, 100);
+            }
+        }
+        
         // Set up event listeners for plan selection
         const planCards = document.querySelectorAll('.plan-selection .pricing-card');
         planCards.forEach(card => {
