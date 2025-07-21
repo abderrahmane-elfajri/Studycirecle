@@ -95,21 +95,75 @@
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="video-section">
+    <!-- Video Reel Section -->
+    <section id="video" class="video-reel-section">
         <div class="container">
             <h2 data-en="Learn More About Our Program" 
                 data-fr="En savoir plus sur notre programme" 
                 data-ar="تعرف على المزيد حول برنامجنا">
                 Learn More About Our Program
             </h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                        title="Studycircle Summer Program Video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
+            <div class="video-reel-container">
+                <div class="reel-card main-video" data-reel-id="program-overview">
+                    <div class="reel-video-container">
+                        <iframe src="https://drive.google.com/file/d/1oiKYQRyzDP0NEeeiaPCv_Kq_O5PUf3uH/preview" 
+                                title="StudyCircle Summer Program Overview" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                        <div class="reel-overlay">
+                            <div class="play-button" onclick="playVideoReel('program-overview')">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel-content">
+                        <div class="reel-profile">
+                            <div class="profile-pic">
+                                <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="StudyCircle">
+                            </div>
+                            <div class="profile-info">
+                                <h3>@studycircle.pro</h3>
+                                <p data-en="Transform Your Summer Journey" 
+                                   data-fr="Transformez votre parcours d'été" 
+                                   data-ar="حول رحلتك الصيفية">Transform Your Summer Journey</p>
+                            </div>
+                        </div>
+                        <div class="reel-description">
+                            <p data-en="🌟 Discover how StudyCircle Summer Program can transform your summer into your best investment! Join hundreds of students already making their future count. #StudyCircle #SummerProgram #Education #Skills"
+                               data-fr="🌟 Découvrez comment le programme d'été StudyCircle peut transformer votre été en votre meilleur investissement! Rejoignez des centaines d'étudiants qui font déjà compter leur avenir. #StudyCircle #ProgrammeEte #Education #Competences"
+                               data-ar="🌟 اكتشف كيف يمكن لبرنامج StudyCircle الصيفي أن يحول صيفك إلى أفضل استثمار لك! انضم إلى مئات الطلاب الذين يجعلون مستقبلهم مهماً بالفعل. #StudyCircle #البرنامج_الصيفي #التعليم #المهارات">
+                                🌟 Discover how StudyCircle Summer Program can transform your summer into your best investment! Join hundreds of students already making their future count. #StudyCircle #SummerProgram #Education #Skills
+                            </p>
+                        </div>
+                        <div class="reel-stats">
+                            <div class="reel-stat">
+                                <span class="views">2,847 views</span>
+                            </div>
+                            <div class="reel-stat">
+                                <span class="time">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel-actions">
+                        <div class="reel-action likes" onclick="likeReel('program-overview')">
+                            <i class="far fa-heart"></i>
+                            <span>156</span>
+                        </div>
+                        <div class="reel-action comments" onclick="scrollToComments()">
+                            <i class="far fa-comment"></i>
+                            <span>23</span>
+                        </div>
+                        <div class="reel-action shares" onclick="shareReel('program-overview')">
+                            <i class="far fa-paper-plane"></i>
+                            <span>12</span>
+                        </div>
+                        <div class="reel-action bookmark">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

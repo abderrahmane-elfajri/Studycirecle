@@ -1166,6 +1166,184 @@ Object.keys(registrationTranslations).forEach(lang => {
     }
 });
 
+// Video Reel Functions
+function playVideoReel(reelId) {
+    const reel = document.querySelector(`[data-reel-id="${reelId}"]`);
+    if (reel) {
+        const iframe = reel.querySelector('iframe');
+        const playButton = reel.querySelector('.play-button');
+        const overlay = reel.querySelector('.reel-overlay');
+        
+        if (iframe && playButton) {
+            // Hide the overlay and play button
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+            
+            // Get current iframe src and add autoplay parameter
+            let currentSrc = iframe.src;
+            
+            // For Google Drive videos, we need to modify the URL to enable autoplay
+            if (currentSrc.includes('drive.google.com')) {
+                // Remove any existing parameters and add our own
+                const baseUrl = currentSrc.split('?')[0];
+                iframe.src = baseUrl + '?autoplay=1&controls=1';
+            }
+            
+            // Add playing class for visual effects
+            reel.classList.add('playing');
+            
+            // Update view count
+            const views = reel.querySelector('.views');
+            if (views) {
+                const currentViews = parseInt(views.textContent.replace(/[^\d]/g, ''));
+                const newViews = currentViews + Math.floor(Math.random() * 10) + 1;
+                views.textContent = `${newViews.toLocaleString()} views`;
+            }
+            
+            // Show pause button temporarily then hide overlay completely
+            playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 1000);
+            
+            // Add click listener to iframe to allow pausing
+            iframe.addEventListener('click', function() {
+                pauseVideoReel(reelId);
+            });
+            
+            console.log(`Playing video reel: ${reelId}`);
+        }
+    }
+}
+
+function pauseVideoReel(reelId) {
+    const reel = document.querySelector(`[data-reel-id="${reelId}"]`);
+    if (reel) {
+        const iframe = reel.querySelector('iframe');
+        const playButton = reel.querySelector('.play-button');
+        const overlay = reel.querySelector('.reel-overlay');
+        
+        if (iframe && playButton) {
+            // Show overlay again
+            overlay.style.display = 'flex';
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'all';
+            
+            // Reset iframe src to stop autoplay
+            let currentSrc = iframe.src;
+            if (currentSrc.includes('autoplay=1')) {
+                const baseUrl = currentSrc.split('?')[0];
+                iframe.src = baseUrl + '?controls=1';
+            }
+            
+            // Remove playing class
+            reel.classList.remove('playing');
+            
+            // Show play button again
+            playButton.innerHTML = '<i class="fas fa-play"></i>';
+            
+            console.log(`Paused video reel: ${reelId}`);
+        }
+    }
+}
+
+function likeReel(reelId) {
+    const reel = document.querySelector(`[data-reel-id="${reelId}"]`);
+    if (reel) {
+        const likeButton = reel.querySelector('.reel-action.likes');
+        const heartIcon = likeButton.querySelector('i');
+        
+        // Toggle like state
+        if (heartIcon.classList.contains('fas')) {
+            heartIcon.classList.remove('fas');
+            heartIcon.classList.add('far');
+            likeButton.classList.remove('liked');
+        } else {
+            heartIcon.classList.remove('far');
+            heartIcon.classList.add('fas');
+            likeButton.classList.add('liked');
+            
+            // Create floating heart effect
+            createFloatingHeart(likeButton);
+        }
+        
+        // Update like count
+        const likeCount = likeButton.querySelector('span');
+        const currentLikes = parseInt(likeCount.textContent);
+        const isLiked = heartIcon.classList.contains('fas');
+        likeCount.textContent = isLiked ? currentLikes + 1 : currentLikes - 1;
+    }
+}
+
+function createFloatingHeart(button) {
+    const heart = document.createElement('div');
+    heart.innerHTML = '<i class="fas fa-heart"></i>';
+    heart.style.cssText = `
+        position: absolute;
+        color: #ff3040;
+        font-size: 24px;
+        pointer-events: none;
+        animation: floatHeart 1s ease-out forwards;
+        z-index: 1000;
+    `;
+    
+    const rect = button.getBoundingClientRect();
+    heart.style.left = rect.left + rect.width/2 + 'px';
+    heart.style.top = rect.top + 'px';
+    
+    document.body.appendChild(heart);
+    
+    setTimeout(() => heart.remove(), 1000);
+}
+
+function shareReel(reelId) {
+    const shareData = {
+        title: 'StudyCircle Summer Program - Transform Your Summer!',
+        text: 'Check out this amazing StudyCircle Summer Program! Transform your summer into your best investment.',
+        url: window.location.href + '#video'
+    };
+    
+    if (navigator.share) {
+        navigator.share(shareData);
+    } else {
+        // Fallback: copy to clipboard
+        navigator.clipboard.writeText(shareData.url).then(() => {
+            showToast('Link copied to clipboard!');
+        });
+    }
+    
+    console.log(`Sharing video reel: ${reelId}`);
+}
+
+function scrollToComments() {
+    // Scroll to FAQ section as "comments" equivalent
+    const faqSection = document.querySelector('.faq-section');
+    if (faqSection) {
+        faqSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 25px;
+        z-index: 10000;
+        animation: toastFadeInOut 3s ease-in-out forwards;
+    `;
+    
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Load language preference first
