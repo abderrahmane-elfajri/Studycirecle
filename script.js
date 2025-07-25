@@ -380,7 +380,6 @@ const translations = {
         'Complete Your Registration': 'أكمل تسجيلك',
         'Need Help?': 'تحتاج مساعدة؟',
         'Join hundreds of students transforming their summer into their best investment!': 'انضم إلى مئات الطلاب الذين يحولون صيفهم إلى أفضل استثمار لهم!',
-        'Save 100 DH!': 'وفر 100 درهم!',
         'Any questions or special requests...': 'أي أسئلة أو طلبات خاصة...'
     }
 };
@@ -627,12 +626,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Mobile menu toggle (if needed)
-function toggleMobileMenu() {
-    const nav = document.querySelector('.nav');
-    nav.classList.toggle('active');
-}
-
 // Mobile navigation functionality
 function toggleMobileNav() {
     const nav = document.getElementById('mobileNav');
@@ -873,6 +866,20 @@ async function submitRegistration(event) {
     const submitBtn = form.querySelector('.btn-submit');
     const messageDiv = document.getElementById('submitMessage');
     
+    // Check privacy policy agreement
+    const privacyCheckbox = document.getElementById('privacyPolicy');
+    if (!privacyCheckbox || !privacyCheckbox.checked) {
+        messageDiv.className = 'submit-message error';
+        messageDiv.innerHTML = getTranslatedText('privacy_required', 'Please agree to the Privacy Policy before submitting.');
+        messageDiv.style.display = 'block';
+        messageDiv.scrollIntoView({ behavior: 'smooth' });
+        
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span data-en="Submit Registration" data-fr="Soumettre l\'inscription" data-ar="إرسال التسجيل">Submit Registration</span>';
+        return;
+    }
+    
     // Disable submit button
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Submitting...</span>';
@@ -887,6 +894,7 @@ async function submitRegistration(event) {
             phone: formData.get('phone'),
             plan: formData.get('plan'),
             message: formData.get('message') || '',
+            privacyAgreed: formData.get('privacyPolicy') ? 'Yes' : 'No',
             language: currentLanguage
         };
         
@@ -1135,7 +1143,9 @@ const registrationTranslations = {
         'Save 100 DH!': 'Save 100 DH!',
         'Any questions or special requests...': 'Any questions or special requests...',
         'Bonus Udemy courses access': 'Bonus Udemy courses access',
-        'Customizable training plan': 'Customizable training plan'
+        'Customizable training plan': 'Customizable training plan',
+        'privacy_required': 'Please agree to the Privacy Policy before submitting.',
+        'registration_success': 'Registration submitted successfully! We will contact you soon.'
     },
     fr: {
         'Choose Your Plan': 'Choisissez votre plan',
@@ -1145,7 +1155,9 @@ const registrationTranslations = {
         'Save 100 DH!': 'Économisez 100 DH!',
         'Any questions or special requests...': 'Des questions ou des demandes spéciales...',
         'Bonus Udemy courses access': 'Accès bonus aux cours Udemy',
-        'Customizable training plan': 'Plan de formation personnalisable'
+        'Customizable training plan': 'Plan de formation personnalisable',
+        'privacy_required': 'Veuillez accepter la Politique de confidentialité avant de soumettre.',
+        'registration_success': 'Inscription soumise avec succès! Nous vous contacterons bientôt.'
     },
     ar: {
         'Choose Your Plan': 'اختر خطتك',
@@ -1155,7 +1167,9 @@ const registrationTranslations = {
         'Save 100 DH!': 'وفر 100 درهم!',
         'Any questions or special requests...': 'أي أسئلة أو طلبات خاصة...',
         'Bonus Udemy courses access': 'وصول إضافي لدورات Udemy',
-        'Customizable training plan': 'خطة تدريب قابلة للتخصيص'
+        'Customizable training plan': 'خطة تدريب قابلة للتخصيص',
+        'privacy_required': 'يرجى الموافقة على سياسة الخصوصية قبل الإرسال.',
+        'registration_success': 'تم إرسال التسجيل بنجاح! سنتواصل معك قريباً.'
     }
 };
 
@@ -1344,6 +1358,297 @@ function showToast(message) {
     setTimeout(() => toast.remove(), 3000);
 }
 
+// Instagram Reel Functions
+function openInstagramReel() {
+    // Open the Instagram reel in a new tab
+    const instagramUrl = 'https://www.instagram.com/reel/DMh7nafI86L/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==';
+    window.open(instagramUrl, '_blank');
+    
+    // Update view count
+    const views = document.querySelector('.reel-stat .views');
+    if (views) {
+        const currentViews = parseInt(views.textContent.replace(/[^\d]/g, ''));
+        const newViews = currentViews + Math.floor(Math.random() * 5) + 1;
+        views.textContent = `${newViews.toLocaleString()} views`;
+    }
+    
+    // Show toast message
+    showToast('Opening Instagram reel in new tab...');
+    
+    console.log('Opening Instagram reel in new tab');
+}
+
+function shareInstagramReel() {
+    const shareData = {
+        title: 'StudyCircle Student Success Story - Instagram Reel',
+        text: 'Check out this amazing student transformation story from StudyCircle!',
+        url: 'https://www.instagram.com/reel/DMh5KE4IaTF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+    };
+    
+    if (navigator.share) {
+        navigator.share(shareData);
+    } else {
+        // Fallback: copy to clipboard
+        navigator.clipboard.writeText(shareData.url).then(() => {
+            showToast('Instagram reel link copied to clipboard!');
+        });
+    }
+    
+    console.log('Sharing Instagram reel');
+}
+
+// Enhanced Instagram Reel Functions
+function likeReel() {
+    const likeButton = document.querySelector('.side-actions .action-btn:first-child .action-count');
+    if (likeButton) {
+        const currentLikes = parseFloat(likeButton.textContent);
+        let newLikes;
+        if (likeButton.textContent.includes('K')) {
+            newLikes = (currentLikes + 0.1).toFixed(1) + 'K';
+        } else {
+            newLikes = (parseInt(currentLikes) + Math.floor(Math.random() * 5) + 1).toString();
+        }
+        likeButton.textContent = newLikes;
+        
+        // Add heart animation
+        const heartIcon = document.querySelector('.side-actions .action-btn:first-child .action-icon i');
+        if (heartIcon) {
+            heartIcon.style.color = '#ff3040';
+            heartIcon.classList.add('fas');
+            heartIcon.classList.remove('far');
+            setTimeout(() => {
+                heartIcon.style.color = 'white';
+            }, 1000);
+        }
+        
+        // Create floating heart effect
+        createFloatingEffect(heartIcon.parentElement, '❤️');
+    }
+    
+    showToast('❤️ Liked the reel!');
+}
+
+function shareReel() {
+    const instagramUrl = 'https://www.instagram.com/reel/DMh7nafI86L/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==';
+    
+    const shareData = {
+        title: 'StudyCircle Summer Program - Transform Your Future!',
+        text: 'Check out this amazing transformation journey with StudyCircle! 🎓✨',
+        url: instagramUrl
+    };
+    
+    if (navigator.share) {
+        navigator.share(shareData).then(() => {
+            showToast('📤 Shared successfully!');
+        }).catch(err => {
+            console.log('Error sharing:', err);
+            fallbackShare(instagramUrl);
+        });
+    } else {
+        fallbackShare(instagramUrl);
+    }
+    
+    // Update share count
+    const shareCount = document.querySelector('.side-actions .action-btn:nth-child(3) .action-count');
+    if (shareCount) {
+        const currentShares = parseInt(shareCount.textContent);
+        shareCount.textContent = (currentShares + 1).toString();
+    }
+    
+    // Create floating share effect
+    const shareIcon = document.querySelector('.side-actions .action-btn:nth-child(3) .action-icon');
+    if (shareIcon) {
+        createFloatingEffect(shareIcon, '📤');
+    }
+}
+
+function fallbackShare(url) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+            showToast('📋 Link copied to clipboard!');
+        });
+    } else {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = url;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showToast('📋 Link copied to clipboard!');
+    }
+}
+
+// Create floating effect for interactions
+function createFloatingEffect(element, emoji) {
+    const floating = document.createElement('div');
+    floating.textContent = emoji;
+    floating.style.cssText = `
+        position: absolute;
+        font-size: 24px;
+        pointer-events: none;
+        animation: floatUp 2s ease-out forwards;
+        z-index: 1000;
+    `;
+    
+    const rect = element.getBoundingClientRect();
+    floating.style.left = (rect.left + rect.width/2) + 'px';
+    floating.style.top = rect.top + 'px';
+    
+    document.body.appendChild(floating);
+    
+    setTimeout(() => floating.remove(), 2000);
+}
+
+// Add floating animation keyframes
+const floatingStyle = document.createElement('style');
+floatingStyle.textContent = `
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-50px) scale(1.5);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(floatingStyle);
+
+// Add enhanced button animations
+function addButtonEnhancements() {
+    const watchReelBtn = document.querySelector('.watch-reel-btn');
+    if (watchReelBtn) {
+        watchReelBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.05)';
+            this.style.boxShadow = '0 15px 40px rgba(131, 58, 180, 0.6), 0 0 30px rgba(253, 29, 29, 0.4)';
+        });
+        
+        watchReelBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-3px) scale(1.05)';
+            this.style.boxShadow = '0 10px 30px rgba(131, 58, 180, 0.5)';
+        });
+        
+        watchReelBtn.addEventListener('click', function() {
+            this.style.transform = 'translateY(-1px) scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            }, 150);
+        });
+    }
+    
+    const registerBtn = document.querySelector('.register-btn');
+    if (registerBtn) {
+        registerBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px) scale(1.02)';
+            this.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.2)';
+        });
+        
+        registerBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-2px) scale(1.02)';
+            this.style.boxShadow = 'none';
+        });
+        
+        registerBtn.addEventListener('click', function() {
+            this.style.transform = 'translateY(0px) scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            }, 150);
+        });
+    }
+    
+    // Add Instagram camera and search hover effects
+    const cameraIcon = document.querySelector('.ig-camera-icon');
+    const searchIcon = document.querySelector('.ig-search');
+    
+    [cameraIcon, searchIcon].forEach(icon => {
+        if (icon) {
+            icon.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.color = '#fd1d1d';
+            });
+            
+            icon.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.color = 'white';
+            });
+        }
+    });
+}
+
+// Initialize enhanced video section animations
+function initializeVideoSection() {
+    // Add phone hover animations
+    const phoneFrame = document.querySelector('.phone-frame');
+    if (phoneFrame) {
+        phoneFrame.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.02)';
+        });
+        
+        phoneFrame.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+    }
+    
+    // Add play button pulse animation
+    const playButton = document.querySelector('.play-button-main');
+    if (playButton) {
+        setInterval(() => {
+            playButton.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                playButton.style.transform = 'scale(1)';
+            }, 200);
+        }, 4000);
+    }
+    
+    // Add floating animation to action buttons
+    const actionBtns = document.querySelectorAll('.action-btn');
+    actionBtns.forEach((btn, index) => {
+        btn.style.animationDelay = `${index * 0.3}s`;
+        btn.classList.add('floating-animation');
+    });
+    
+    // Add stats counter animation
+    animateStats();
+    
+    // Add Instagram navigation item active effect
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navItems.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+}
+
+// Animate stats numbers
+function animateStats() {
+    const stats = document.querySelectorAll('.stat-number');
+    
+    stats.forEach(stat => {
+        const target = stat.textContent;
+        let current = 0;
+        const increment = target.includes('K') ? 0.1 : 1;
+        const isK = target.includes('K');
+        const targetValue = parseFloat(target);
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= targetValue) {
+                current = targetValue;
+                clearInterval(timer);
+            }
+            
+            if (isK) {
+                stat.textContent = current.toFixed(1) + 'K';
+            } else {
+                stat.textContent = Math.floor(current).toString();
+            }
+        }, 30);
+    });
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Load language preference first
@@ -1352,5 +1657,83 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize registration page if elements exist
     if (document.querySelector('.plan-selection') || document.querySelector('#registrationForm')) {
         initializeRegistrationPage();
+    }
+    
+    // Initialize checkbox functionality
+    initializeCheckbox();
+    
+    // Add button enhancements for video section
+    addButtonEnhancements();
+    
+    // Initialize enhanced video section animations
+    initializeVideoSection();
+});
+
+// Privacy Policy Modal Functions
+function showPrivacyPolicy() {
+    const modal = document.getElementById('privacyModal');
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
+}
+
+function closePrivacyPolicy() {
+    const modal = document.getElementById('privacyModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore background scroll
+    }
+}
+
+// Enhanced checkbox functionality
+function initializeCheckbox() {
+    const checkbox = document.getElementById('privacyPolicy');
+    const checkboxWrapper = document.querySelector('.checkbox-wrapper');
+    
+    if (checkbox && checkboxWrapper) {
+        // Add click handler to wrapper for better UX
+        checkboxWrapper.addEventListener('click', function(e) {
+            // Don't trigger if clicking on the link
+            if (!e.target.closest('a')) {
+                e.preventDefault();
+                checkbox.checked = !checkbox.checked;
+                // Trigger change event
+                checkbox.dispatchEvent(new Event('change'));
+            }
+        });
+        
+        // Add visual feedback on checkbox change
+        checkbox.addEventListener('change', function() {
+            const checkboxCustom = document.querySelector('.checkbox-custom');
+            if (checkboxCustom) {
+                if (this.checked) {
+                    checkboxCustom.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        checkboxCustom.style.transform = 'scale(1)';
+                    }, 150);
+                }
+            }
+        });
+        
+        // Prevent label click from bubbling when clicking the checkbox directly
+        checkbox.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+}
+
+// Close privacy modal when clicking outside
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('privacyModal');
+    if (event.target === modal) {
+        closePrivacyPolicy();
+    }
+});
+
+// Close privacy modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closePrivacyPolicy();
     }
 });

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1100;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-radius: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+            background: #ff6b6b;
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+            background: #ff6b6b;
+        }
+        
+        .nav {
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #4facfe;
+        }
+        
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            display: block;
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+        
+        .mobile-menu-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 85%;
+                max-width: 320px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                transform: translateX(100%);
+                padding: 80px 0 40px 0;
+                z-index: 1100;
+                transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+                visibility: visible;
+                opacity: 1;
+                overflow-y: auto;
+                border-left: 2px solid rgba(255, 255, 255, 0.2);
+            }
+            
+            .nav.active {
+                transform: translateX(0) !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                display: block !important;
+            }
+            
+            .nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 0 20px;
+            }
+            
+            .nav li {
+                margin: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                transform: translateX(50px);
+                opacity: 0;
+                animation: none;
+            }
+            
+            .nav.active li {
+                animation: slideInFromRight 0.6s ease forwards;
+            }
+            
+            .nav.active li:nth-child(1) { animation-delay: 0.1s; }
+            .nav.active li:nth-child(2) { animation-delay: 0.2s; }
+            .nav.active li:nth-child(3) { animation-delay: 0.3s; }
+            .nav.active li:nth-child(4) { animation-delay: 0.4s; }
+            .nav.active li:nth-child(5) { animation-delay: 0.5s; }
+            
+            .nav a {
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 20px 0;
+                display: block;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                position: relative;
+                border-radius: 0;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .nav a:hover {
+                color: #4facfe;
+                transform: translateX(10px);
+                text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+            }
+        }
+        
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileNav()"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Studycircle</div>
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav" id="mobileNav">
+                <button class="mobile-menu-close" onclick="closeMobileNav()">×</button>
+                <ul>
+                    <li><a href="#home" onclick="closeMobileNav()">Home</a></li>
+                    <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+                    <li><a href="#program" onclick="closeMobileNav()">Program</a></li>
+                    <li><a href="#schedule" onclick="closeMobileNav()">Schedule</a></li>
+                    <li><a href="#pricing" onclick="closeMobileNav()">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Mobile Menu Test</h1>
+        <p>Resize your browser window to mobile size or open on mobile device to test the hamburger menu.</p>
+        <p>Click the hamburger icon in the top right corner to open the mobile menu.</p>
+    </div>
+
+    <script>
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const hamburger = document.querySelector('.hamburger');
+            
+            console.log('Toggle mobile nav called');
+            console.log('Nav element:', nav);
+            console.log('Overlay element:', overlay);
+            console.log('Hamburger element:', hamburger);
+            
+            if (nav && overlay && hamburger) {
+                nav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                
+                console.log('Nav has active class:', nav.classList.contains('active'));
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            } else {
+                console.error('One or more elements not found!');
+            }
+        }
+
+        function closeMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (nav && overlay && hamburger) {
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                hamburger.classList.remove('active');
+                
+                // Restore body scroll
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mobileNav');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (nav && hamburger && nav.classList.contains('active')) {
+                // Check if click is outside the nav and hamburger
+                if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                    closeMobileNav();
+                }
+            }
+        });
+
+        // Prevent menu close when clicking inside the nav
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.getElementById('mobileNav');
+            if (nav) {
+                nav.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

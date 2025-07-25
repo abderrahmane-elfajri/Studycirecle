@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stu                                <li data-en                        <li data-en="📝 C++ — create practical, real-world applications" 
+    <title>Stu                                <li data-en              <li data-en="📝 C++ — create practical, real-world applications" 
                             data-fr="� C++ — créez des applications pratiques du monde réel" 
                             data-ar="📝 C++ — أنشئ تطبيقات عملية من العالم الحقيقي">
                             📝 C++ — create practical, real-world applications
@@ -96,74 +96,119 @@
     </section>
 
     <!-- Video Reel Section -->
-    <section id="video" class="video-reel-section">
+    <section id="video" class="instagram-button-section">
         <div class="container">
-            <h2 data-en="Learn More About Our Program" 
-                data-fr="En savoir plus sur notre programme" 
-                data-ar="تعرف على المزيد حول برنامجنا">
-                Learn More About Our Program
-            </h2>
-            <div class="video-reel-container">
-                <div class="reel-card main-video" data-reel-id="program-overview">
-                    <div class="reel-video-container">
-                        <iframe src="https://drive.google.com/file/d/1oiKYQRyzDP0NEeeiaPCv_Kq_O5PUf3uH/preview" 
-                                title="StudyCircle Summer Program Overview" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                        <div class="reel-overlay">
-                            <div class="play-button" onclick="playVideoReel('program-overview')">
-                                <i class="fas fa-play"></i>
+            <div class="section-header">
+                <h2 data-en="Learn More About Our Program" 
+                    data-fr="En savoir plus sur notre programme" 
+                    data-ar="تعرف على المزيد حول برنامجنا">
+                    Learn More About Our Program
+                </h2>
+                <p class="section-subtitle" data-en="Watch our exclusive Instagram reel and discover the amazing transformation journey!"
+                   data-fr="Regardez notre reel Instagram exclusif et découvrez l'incroyable parcours de transformation!"
+                   data-ar="شاهد الريل الحصري على إنستغرام واكتشف رحلة التحول المذهلة!">
+                    Watch our exclusive Instagram reel and discover the amazing transformation journey!
+                </p>
+            </div>
+            <div class="instagram-video-showcase">
+                <!-- Main Instagram Video Button -->
+                <div class="instagram-video-button" onclick="openInstagramReel()">
+                    <div class="video-preview">
+                        <div class="video-background">
+                            <div class="gradient-overlay"></div>
+                            <div class="content-layer">
+                                <!-- Instagram Logo -->
+                                <div class="instagram-logo">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                
+                                <!-- Main Content -->
+                                <div class="video-content">
+                                    <h3 data-en="Transform Your Future Today!" 
+                                        data-fr="Transformez votre avenir aujourd'hui!" 
+                                        data-ar="حول مستقبلك اليوم!">
+                                        Transform Your Future Today!
+                                    </h3>
+                                    <p data-en="Experience world-class education and unlock unlimited potential ❤️ 4.2K"
+                                       data-fr="Vivez une éducation de classe mondiale et libérez un potentiel illimité ❤️ 4.2K"
+                                       data-ar="اختبر التعليم عالمي المستوى واطلق إمكانات لا محدودة ❤️ 4.2K">
+                                        Experience world-class education and unlock unlimited potential ❤️ 4.2K
+                                    </p>
+                                    
+                                    <!-- Profile Info -->
+                                    <div class="profile-info">
+                                        <div class="profile-avatar">
+                                            <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="StudyCircle">
+                                        </div>
+                                        <div class="profile-details">
+                                            <span class="username">@studycircle.pro</span>
+                                            <span class="description" data-en="Educational Excellence • Summer Program 2024"
+                                                  data-fr="Excellence Éducative • Programme d'Été 2024"
+                                                  data-ar="التميز التعليمي • البرنامج الصيفي 2024">
+                                                Educational Excellence • Summer Program 2024
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Hashtags -->
+                                    <div class="hashtags">
+                                        <span>#StudyCircle</span>
+                                        <span>#StudentSuccess</span>
+                                        <span>#Transformation</span>
+                                        <span>#Education</span>
+                                    </div>
+                                    
+                                    <!-- Stats -->
+                                    <div class="video-stats">
+                                        <span class="views">💎 Watch our amazing student success story on Instagram! See how StudyCircle transforms lives and futures. Click to view the reel! 287</span>
+                                        <span class="time">28.7K views • 2 hours ago</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Play Button -->
+                                <div class="play-button">
+                                    <div class="play-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <div class="play-ripple"></div>
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="reel-content">
-                        <div class="reel-profile">
-                            <div class="profile-pic">
-                                <img src="WhatsApp_Image_2025-07-12_at_00.04.29_2013c7f4-removebg-preview.png" alt="StudyCircle">
-                            </div>
-                            <div class="profile-info">
-                                <h3>@studycircle.pro</h3>
-                                <p data-en="Transform Your Summer Journey" 
-                                   data-fr="Transformez votre parcours d'été" 
-                                   data-ar="حول رحلتك الصيفية">Transform Your Summer Journey</p>
-                            </div>
-                        </div>
-                        <div class="reel-description">
-                            <p data-en="🌟 Discover how StudyCircle Summer Program can transform your summer into your best investment! Join hundreds of students already making their future count. #StudyCircle #SummerProgram #Education #Skills"
-                               data-fr="🌟 Découvrez comment le programme d'été StudyCircle peut transformer votre été en votre meilleur investissement! Rejoignez des centaines d'étudiants qui font déjà compter leur avenir. #StudyCircle #ProgrammeEte #Education #Competences"
-                               data-ar="🌟 اكتشف كيف يمكن لبرنامج StudyCircle الصيفي أن يحول صيفك إلى أفضل استثمار لك! انضم إلى مئات الطلاب الذين يجعلون مستقبلهم مهماً بالفعل. #StudyCircle #البرنامج_الصيفي #التعليم #المهارات">
-                                🌟 Discover how StudyCircle Summer Program can transform your summer into your best investment! Join hundreds of students already making their future count. #StudyCircle #SummerProgram #Education #Skills
-                            </p>
-                        </div>
-                        <div class="reel-stats">
-                            <div class="reel-stat">
-                                <span class="views">2,847 views</span>
-                            </div>
-                            <div class="reel-stat">
-                                <span class="time">2 days ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel-actions">
-                        <div class="reel-action likes" onclick="likeReel('program-overview')">
-                            <i class="far fa-heart"></i>
-                            <span>156</span>
-                        </div>
-                        <div class="reel-action comments" onclick="scrollToComments()">
-                            <i class="far fa-comment"></i>
-                            <span>23</span>
-                        </div>
-                        <div class="reel-action shares" onclick="shareReel('program-overview')">
-                            <i class="far fa-paper-plane"></i>
-                            <span>12</span>
-                        </div>
-                        <div class="reel-action bookmark">
-                            <i class="far fa-bookmark"></i>
+                    
+                    <!-- Hover Overlay -->
+                    <div class="hover-overlay">
+                        <div class="hover-content">
+                            <i class="fab fa-instagram"></i>
+                            <span data-en="Watch on Instagram" data-fr="Regarder sur Instagram" data-ar="شاهد على إنستغرام">Watch on Instagram</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <h3 data-en="Ready to Transform Your Future?" 
+                        data-fr="Prêt à transformer votre avenir?" 
+                        data-ar="هل أنت مستعد لتحويل مستقبلك؟">
+                        Ready to Transform Your Future?
+                    </h3>
+                    <p data-en="Join thousands of students who have already started their transformation journey with StudyCircle!"
+                       data-fr="Rejoignez des milliers d'étudiants qui ont déjà commencé leur parcours de transformation avec StudyCircle!"
+                       data-ar="انضم إلى آلاف الطلاب الذين بدأوا بالفعل رحلة التحول مع StudyCircle!">
+                        Join thousands of students who have already started their transformation journey with StudyCircle!
+                    </p>
+                    
+                    <div class="action-buttons">
+                        <a href="register.html" class="btn-register-main">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span data-en="Register Now" data-fr="S'inscrire Maintenant" data-ar="سجل الآن">Register Now</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+ 
             </div>
         </div>
     </section>
@@ -423,7 +468,7 @@
             <div class="pricing-cards">
                 <div class="pricing-card">
                     <h3 data-en="Bac Track" data-fr="Parcours Bac" data-ar="مسار البكالوريا">Bac Track</h3>
-                    <div class="price">500 DH</div>
+                    <div class="price">550 DH</div>
                     <p data-en="Perfect for Bac students" data-fr="Parfait pour les étudiants au Bac" data-ar="مثالي لطلاب البكالوريا">Perfect for Bac students</p>
                     <a href="bac-track.html" class="btn btn-outline">
                         <span data-en="View Details" data-fr="Voir les détails" data-ar="عرض التفاصيل">View Details</span>
@@ -431,7 +476,7 @@
                 </div>
                 <div class="pricing-card">
                     <h3 data-en="Skills Track" data-fr="Parcours Compétences" data-ar="مسار المهارات">Skills Track</h3>
-                    <div class="price">600 DH</div>
+                    <div class="price">660 DH</div>
                     <p data-en="Learn real-world skills" data-fr="Apprenez des compétences du monde réel" data-ar="تعلم مهارات العالم الحقيقي">Learn real-world skills</p>
                     <a href="skills-track.html" class="btn btn-outline">
                         <span data-en="View Details" data-fr="Voir les détails" data-ar="عرض التفاصيل">View Details</span>

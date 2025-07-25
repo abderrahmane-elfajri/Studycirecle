@@ -70,7 +70,7 @@
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3 data-en="Bac Track" data-fr="Parcours Bac" data-ar="مسار البكالوريا">Bac Track</h3>
-                        <div class="price">500 DH</div>
+                        <div class="price">550 DH</div>
                         <ul class="plan-features">
                             <li data-en="🔴 Live sessions in Maths and Physics (4 sessions per week)" 
                                 data-fr="🔴 Sessions en direct en Maths et Physique (4 sessions par semaine)" 
@@ -103,7 +103,7 @@
                             <i class="fas fa-rocket"></i>
                         </div>
                         <h3 data-en="Skills Track" data-fr="Parcours Compétences" data-ar="مسار المهارات">Skills Track</h3>
-                        <div class="price">600 DH</div>
+                        <div class="price">660 DH</div>
                         <ul class="plan-features">
                             <li data-en="💻 Python programming from scratch" 
                                 data-fr="💻 Programmation Python à partir de zéro" 
@@ -199,8 +199,8 @@
                         <label for="plan" data-en="Selected Plan" data-fr="Plan sélectionné" data-ar="الخطة المحددة">Selected Plan</label>
                         <select id="plan" name="plan" required>
                             <option value="" data-en="Choose a plan..." data-fr="Choisissez un plan..." data-ar="اختر خطة...">Choose a plan...</option>
-                            <option value="Bac Track" data-en="Bac Track - 500 DH" data-fr="Parcours Bac - 500 DH" data-ar="مسار البكالوريا - 500 درهم">Bac Track - 500 DH</option>
-                            <option value="Skills Track" data-en="Skills Track - 600 DH" data-fr="Parcours Compétences - 600 DH" data-ar="مسار المهارات - 600 درهم">Skills Track - 600 DH</option>
+                            <option value="Bac Track" data-en="Bac Track - 550 DH" data-fr="Parcours Bac - 550 DH" data-ar="مسار البكالوريا - 550 درهم">Bac Track - 550 DH</option>
+                            <option value="Skills Track" data-en="Skills Track - 660 DH" data-fr="Parcours Compétences - 660 DH" data-ar="مسار المهارات - 660 درهم">Skills Track - 660 DH</option>
                             <option value="Combo Package" data-en="Combo Package - 1100 DH" data-fr="Package Combo - 1100 DH" data-ar="باقة مجمعة - 1100 درهم">Combo Package - 1100 DH</option>
                         </select>
                     </div>
@@ -208,6 +208,18 @@
                     <div class="form-group">
                         <label for="message" data-en="Additional Message (Optional)" data-fr="Message supplémentaire (optionnel)" data-ar="رسالة إضافية (اختيارية)">Additional Message (Optional)</label>
                         <textarea id="message" name="message" rows="4" placeholder="Any questions or special requests..."></textarea>
+                    </div>
+                    
+                    <!-- Privacy Policy Checkbox -->
+                    <div class="form-group privacy-policy-group">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">
+                                <span data-en="I have read and agree to the " data-fr="J'ai lu et j'accepte la " data-ar="لقد قرأت ووافقت على ">I have read and agree to the </span>
+                                <a href="#" onclick="showPrivacyPolicy()" class="privacy-link" data-en="Privacy Policy" data-fr="Politique de confidentialité" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                            </span>
+                        </label>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-submit">
@@ -271,6 +283,84 @@
             </div>
         </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-modal-content">
+            <div class="privacy-modal-header">
+                <h2 data-en="Privacy Policy" data-fr="Politique de confidentialité" data-ar="سياسة الخصوصية">Privacy Policy</h2>
+                <span class="privacy-close" onclick="closePrivacyPolicy()">&times;</span>
+            </div>
+            <div class="privacy-modal-body">
+                <div class="privacy-content">
+                    <h3 data-en="1. Introduction" data-fr="1. Introduction" data-ar="1. مقدمة">1. Introduction</h3>
+                    <p data-en="StudyCircle.page ('we', 'us', 'our') values your privacy. This policy explains how we collect, use, share, and protect your information."
+                       data-fr="StudyCircle.page ('nous', 'nous', 'notre') accorde de l'importance à votre vie privée. Cette politique explique comment nous collectons, utilisons, partageons et protégeons vos informations."
+                       data-ar="StudyCircle.page ('نحن'، 'نا'، 'نا') يقدر خصوصيتك. تشرح هذه السياسة كيف نجمع ونستخدم ونشارك ونحمي معلوماتك.">
+                        StudyCircle.page ("we", "us", "our") values your privacy. This policy explains how we collect, use, share, and protect your information.
+                    </p>
+
+                    <h3 data-en="2. Information We Collect" data-fr="2. Informations que nous collectons" data-ar="2. المعلومات التي نجمعها">2. Information We Collect</h3>
+                    <p data-en="Personal Data: Name, email, phone number"
+                       data-fr="Données personnelles : Nom, e-mail, numéro de téléphone"
+                       data-ar="البيانات الشخصية: الاسم، البريد الإلكتروني، رقم الهاتف">
+                        Personal Data: Name, email, phone number
+                    </p>
+
+                    <h3 data-en="3. How We Use Data" data-fr="3. Comment nous utilisons les données" data-ar="3. كيف نستخدم البيانات">3. How We Use Data</h3>
+                    <ul>
+                        <li data-en="Provide and improve our service." data-fr="Fournir et améliorer notre service." data-ar="تقديم وتحسين خدمتنا.">Provide and improve our service.</li>
+                        <li data-en="Personalize content and notifications." data-fr="Personnaliser le contenu et les notifications." data-ar="تخصيص المحتوى والإشعارات.">Personalize content and notifications.</li>
+                        <li data-en="Communicate updates, marketing, account alerts." data-fr="Communiquer les mises à jour, le marketing, les alertes de compte." data-ar="التواصل للتحديثات والتسويق وتنبيهات الحساب.">Communicate updates, marketing, account alerts.</li>
+                        <li data-en="Monitor security and prevent fraud." data-fr="Surveiller la sécurité et prévenir la fraude." data-ar="مراقبة الأمان ومنع الاحتيال.">Monitor security and prevent fraud.</li>
+                    </ul>
+
+                    <h3 data-en="4. Data Sharing" data-fr="4. Partage des données" data-ar="4. مشاركة البيانات">4. Data Sharing</h3>
+                    <p data-en="Service Providers: Hosting, analytics, email—under confidentiality agreements."
+                       data-fr="Fournisseurs de services : Hébergement, analytique, e-mail—sous accords de confidentialité."
+                       data-ar="مقدمو الخدمة: الاستضافة، التحليلات، البريد الإلكتروني—تحت اتفاقيات السرية.">
+                        Service Providers: Hosting, analytics, email—under confidentiality agreements.
+                    </p>
+
+                    <h3 data-en="5. Cookies & Tracking" data-fr="5. Cookies et suivi" data-ar="5. ملفات تعريف الارتباط والتتبع">5. Cookies & Tracking</h3>
+                    <p data-en="We use cookies and similar technologies to enhance experience, personalize content, and for analytics. You can manage preferences via browser settings; disabling may affect functionality."
+                       data-fr="Nous utilisons des cookies et des technologies similaires pour améliorer l'expérience, personnaliser le contenu et pour l'analytique. Vous pouvez gérer les préférences via les paramètres du navigateur ; la désactivation peut affecter la fonctionnalité."
+                       data-ar="نستخدم ملفات تعريف الارتباط والتقنيات المماثلة لتحسين التجربة وتخصيص المحتوى والتحليلات. يمكنك إدارة التفضيلات عبر إعدادات المتصفح؛ قد يؤثر التعطيل على الوظائف.">
+                        We use cookies and similar technologies to enhance experience, personalize content, and for analytics. You can manage preferences via browser settings; disabling may affect functionality.
+                    </p>
+
+                    <h3 data-en="6. Your Choices" data-fr="6. Vos choix" data-ar="6. خياراتك">6. Your Choices</h3>
+                    <ul>
+                        <li data-en="Edit or delete your profile." data-fr="Modifier ou supprimer votre profil." data-ar="تحرير أو حذف ملفك الشخصي.">Edit or delete your profile.</li>
+                        <li data-en="Opt out of non-essential communications." data-fr="Se désabonner des communications non essentielles." data-ar="إلغاء الاشتراك في الاتصالات غير الأساسية.">Opt out of non-essential communications.</li>
+                        <li data-en="Request data access or erasure." data-fr="Demander l'accès ou l'effacement des données." data-ar="طلب الوصول إلى البيانات أو محوها.">Request data access or erasure.</li>
+                        <li data-en="Manage cookie settings." data-fr="Gérer les paramètres des cookies." data-ar="إدارة إعدادات ملفات تعريف الارتباط.">Manage cookie settings.</li>
+                    </ul>
+
+                    <h3 data-en="7. Security" data-fr="7. Sécurité" data-ar="7. الأمان">7. Security</h3>
+                    <p data-en="We use industry-standard practices (encryption, access controls, secure hosting). However, no system is entirely secure—transmission is at your own risk."
+                       data-fr="Nous utilisons des pratiques standard de l'industrie (chiffrement, contrôles d'accès, hébergement sécurisé). Cependant, aucun système n'est entièrement sécurisé—la transmission est à vos propres risques."
+                       data-ar="نستخدم ممارسات معيارية في الصناعة (التشفير، ضوابط الوصول، الاستضافة الآمنة). ومع ذلك، لا يوجد نظام آمن تمامًا—النقل على مسؤوليتك الخاصة.">
+                        We use industry-standard practices (encryption, access controls, secure hosting). However, no system is entirely secure—transmission is at your own risk.
+                    </p>
+
+                    <h3 data-en="10. Updates to this Policy" data-fr="10. Mises à jour de cette politique" data-ar="10. تحديثات هذه السياسة">10. Updates to this Policy</h3>
+                    <p data-en="We'll notify users of material changes. The latest effective date will appear at the top."
+                       data-fr="Nous informerons les utilisateurs des changements importants. La dernière date d'entrée en vigueur apparaîtra en haut."
+                       data-ar="سنخطر المستخدمين بالتغييرات المهمة. سيظهر آخر تاريخ سريان في الأعلى.">
+                        We'll notify users of material changes. The latest effective date will appear at the top.
+                    </p>
+
+                    <h3 data-en="11. Contact Us" data-fr="11. Contactez-nous" data-ar="11. اتصل بنا">11. Contact Us</h3>
+                    <p data-en="For questions or data requests, email: studycircle564@gmail.com"
+                       data-fr="Pour des questions ou des demandes de données, e-mail : studycircle564@gmail.com"
+                       data-ar="للأسئلة أو طلبات البيانات، البريد الإلكتروني: studycircle564@gmail.com">
+                        For questions or data requests, email: studycircle564@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
